@@ -1812,6 +1812,21 @@ body[data-lp] .gs:not(#paths) .gpanel .gvis.mcs{aspect-ratio:auto!important;min-
 .gvis.mcs::before{background:radial-gradient(55% 40% at 50% 90%,rgba(255,252,236,.95),rgba(255,252,236,0) 72%),radial-gradient(40% 30% at 50% 8%,rgba(255,253,244,.9),rgba(255,253,244,0) 72%),radial-gradient(70% 60% at 85% 70%,rgba(236,196,120,.55),rgba(236,196,120,0) 70%),radial-gradient(70% 60% at 12% 62%,rgba(240,206,134,.5),rgba(240,206,134,0) 70%),linear-gradient(180deg,#fbf1d6 0%,#f1d594 60%,#e8c176 100%)}
 .gvis.mcs::after{opacity:.8;filter:blur(2.5px);mix-blend-mode:screen;-webkit-mask:radial-gradient(75% 85% at 50% 90%,#000 20%,transparent 78%);mask:radial-gradient(75% 85% at 50% 90%,#000 20%,transparent 78%);background:conic-gradient(from -78deg at 50% 90%,transparent 0 4deg,rgba(255,248,222,.85) 6deg,transparent 9deg 17deg,rgba(255,244,210,.55) 19deg 20deg,transparent 24deg 33deg,rgba(255,250,230,.9) 36deg,transparent 41deg 52deg,rgba(255,242,205,.5) 55deg 57deg,transparent 62deg 74deg,rgba(255,250,232,.8) 77deg,transparent 83deg 96deg,rgba(255,244,210,.55) 99deg 100deg,transparent 106deg 118deg,rgba(255,250,230,.85) 121deg,transparent 127deg 140deg,rgba(255,244,212,.5) 143deg,transparent 150deg 360deg)}
 /*MC-CSS-END*/
+/*BK-CSS*/
+.mc-bm,.mc-bb,.mc-bg{--base:#0c0c0e;--edgeL:255,255,255;--sh:rgba(0,0,0,.9);--floor:rgba(0,0,0,.2);--lo:rgba(0,0,0,.7);--embfill:rgba(255,255,255,.03);--mkf:.7;--mks:.8;--mkh:.5}
+.mc-bm,.mc-bb,.mc-bg{--tint:rgba(255,255,255,.6);--hi:rgba(255,255,255,.2)}
+.mc-bm,.mc-bb,.mc-bg{box-shadow:0 2px 4px rgba(0,0,0,.16),0 22px 32px -14px rgba(0,0,0,.4)}
+
+.mc-bm::after,.mc-bb::after,.mc-bg::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:inherit}
+.mc-bm>.mc-tg,.mc-bm>.mc-mk,.mc-bb>.mc-tg,.mc-bb>.mc-mk,.mc-bg>.mc-tg,.mc-bg>.mc-mk{z-index:2}
+/* soft-touch: a faint satin grain and a broad diffuse glow that follows the light */
+.mc-bm::after{background:radial-gradient(55% 70% at var(--mx,50%) var(--my,38%),rgba(255,255,255,.12),transparent 72%),linear-gradient(180deg,rgba(255,255,255,.05),transparent 40%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.6' numOctaves='1' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .3 -.1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") 0 0/220px 220px;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),inset 0 -1px 0 rgba(0,0,0,.5)}
+/* turned metal: concentric grain lit by two opposing lobes that swing round with the light */
+.mc-bb::after{background:conic-gradient(from calc(var(--la,-30deg) - 34deg) at 50% 52%,transparent 0deg,rgba(255,255,255,.05) 12deg,rgba(255,255,255,.26) 34deg,rgba(255,255,255,.05) 56deg,transparent 68deg,transparent 180deg,rgba(255,255,255,.04) 192deg,rgba(255,255,255,.17) 214deg,rgba(255,255,255,.04) 236deg,transparent 248deg,transparent 360deg),repeating-radial-gradient(circle at 50% 52%,rgba(255,255,255,.035) 0 1px,rgba(0,0,0,.14) 1px 2px)}
+/* guilloche: two sets of fine engraved rings overlap into a soft moire wave, under a faint sheen */
+.mc-bg::after{background:repeating-radial-gradient(circle at 18% 38%,rgba(255,255,255,.07) 0 .7px,transparent .7px 4.5px),repeating-radial-gradient(circle at 82% 66%,rgba(255,255,255,.07) 0 .7px,transparent .7px 4.5px),linear-gradient(112deg,transparent 30%,rgba(255,255,255,.05) 44%,transparent 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 -1px 0 rgba(0,0,0,.5)}
+/*BK-CSS-END*/
+
 /*HX-CSS*/
 .mc-gx{--base:linear-gradient(180deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,0) 44%,rgba(0,0,0,.08) 100%),linear-gradient(112deg,rgba(255,255,255,0) 8%,rgba(255,255,255,0.020) 20%,rgba(255,255,255,0.070) 30%,rgba(255,255,255,0.100) 37%,rgba(255,255,255,0.030) 46%,rgba(255,255,255,0) 60%),linear-gradient(112deg,rgba(255,255,255,0) 50%,rgba(255,255,255,0.015) 62%,rgba(255,255,255,0.050) 68%,rgba(255,255,255,0.015) 75%,rgba(255,255,255,0) 86%),linear-gradient(112deg,#1b1b1f 0%,#1f2025 10%,#28292e 20%,#33353a 27%,#3c3d43 31%,#33343a 36%,#28292e 43%,#202125 52%,#1b1c1f 60%,#1a1a1d 66%,#212226 74%,#2a2b2f 82%,#2e2f34 90%,#1c1d20 100%);--edgeL:255,255,255;--sh:rgba(0,0,0,.9);--floor:rgba(0,0,0,.09);--tint:rgba(255,255,255,.28);--hi:rgba(255,255,255,.5);--lo:rgba(0,0,0,.78);--embfill:rgba(255,255,255,.05)}
 /* hero fits one screen: every size is a Figma pixel (frame 1600 x 927) times --s */
@@ -1875,6 +1890,17 @@ body .dk~.sec:has(+.uf){padding-bottom:104px!important}
 /* dwell: stay pinned for a beat so the section can be read before the next one slides over it */
 .dk>*{transform:translate3d(0,calc(var(--dkp,0)*-10svh),0);will-change:transform}
 @media(prefers-reduced-motion:reduce){.dk>*{transform:none}}
+/* layout 1: centred, copy above, card and hand rising below it */
+@media(min-width:900px){
+ html body .hxw.gc .lh-st{--W:min(100cqw,calc(100cqh*1.22));width:var(--W);left:50%;top:auto;bottom:-1.5%;transform:translateX(-50.5%)}
+ html body .hxw.gc .gc-top{left:0;right:0;top:calc(var(--navh,57px) + 3.2cqh);transform:none;width:auto;align-items:center;text-align:center;padding:0 24px}
+ html body .hxw.gc .gc-top .h span{text-align:center}
+ html body .hxw.gc .gc-top .h .a{font-size:clamp(20px,min(2.2cqw,3.8cqh),38px)}
+ html body .hxw.gc .gc-top .h .b{font-size:clamp(46px,min(5.8cqw,10.5cqh),100px);margin:.3cqh 0 0!important}
+ html body .hxw.gc .gc-top .gc-buy{margin-top:clamp(18px,2.4cqh,28px)}
+ html body .hxw.gc .lh::before{inset:-20% 18% 45% 18%!important}
+ html body .hxw.gc .lh::after{inset:25% 22% -20% 22%!important}
+}
 /*DK-CSS-END*/
 /*GP-CSS*/
 html body[data-lp] .gs:not(#paths) .gpanel{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0!important;background:#fafafa!important;border-radius:16px!important;padding:16px!important;align-items:stretch!important;overflow:hidden!important}
@@ -2510,6 +2536,37 @@ html body .gc-top .gc-buy{display:inline-flex;align-items:center;justify-content
 html body .gc-top .gc-buy::before,html body .gc-top .gc-buy::after{display:none}
 html body .gc-top .gc-buy:hover{background:#1c1c1c;transform:translateY(-1px)}
 /*LH-CSS-END*/
+/*DK-CSS*/
+/* dark hero: copy on the left, the photo on the right, everything monochrome */
+.hxw.gc,.lh{background:#000}
+/* slow dark-grey drift behind the card: two soft fields wander on long, uneven cycles (as on the invite page), never edge to edge */
+.lh::before,.lh::after{content:""!important;display:block!important;position:absolute!important;z-index:0!important;pointer-events:none;height:auto!important;left:auto;bottom:auto;filter:blur(56px);will-change:transform;mix-blend-mode:normal!important;opacity:1!important}
+.lh::before{inset:-12% 28% -12% -14%!important;background:radial-gradient(ellipse 52% 46% at 40% 54%,rgba(92,92,98,.34) 0,rgba(92,92,98,.22) 28%,rgba(92,92,98,.09) 55%,transparent 80%);animation:dkA 17s ease-in-out -6s infinite alternate,dkS 23s ease-in-out -3s infinite alternate}
+.lh::after{inset:-18% -16% -8% 34%!important;background:radial-gradient(ellipse 50% 44% at 58% 38%,rgba(118,118,124,.26) 0,rgba(118,118,124,.16) 30%,rgba(118,118,124,.06) 58%,transparent 82%);animation:dkB 21s ease-in-out -11s infinite alternate-reverse,dkS 27s ease-in-out -9s infinite alternate-reverse}
+.lh-st{mix-blend-mode:screen!important}
+@keyframes dkA{from{translate:-7% 4%;rotate:-6deg}to{translate:9% -6%;rotate:7deg}}
+@keyframes dkB{from{translate:8% -5%;rotate:5deg}to{translate:-10% 6%;rotate:-8deg}}
+@keyframes dkS{from{scale:.92}to{scale:1.16}}
+@media(prefers-reduced-motion:reduce){.lh::before,.lh::after{animation:none}}
+.lh-bg{background:url(__WEBP:hero-dark__) center/100% 100% no-repeat;-webkit-mask-image:none;mask-image:none}
+.lh-st{--W:calc(max(100cqw,calc(100cqh*1.7778))*.86);width:var(--W);left:calc(71cqw - var(--W)/2);top:auto;bottom:-5%;transform:none;mix-blend-mode:normal}
+.lh-bg{-webkit-mask-image:linear-gradient(180deg,#000 0,#000 62%,rgba(0,0,0,.88) 69%,rgba(0,0,0,.66) 76%,rgba(0,0,0,.38) 84%,rgba(0,0,0,.14) 92%,transparent 99%);mask-image:linear-gradient(180deg,#000 0,#000 62%,rgba(0,0,0,.88) 69%,rgba(0,0,0,.66) 76%,rgba(0,0,0,.38) 84%,rgba(0,0,0,.14) 92%,transparent 99%)}
+.gc-top{left:55.5px;right:auto;top:calc(50% + 24px);transform:translateY(-50%);width:min(46cqw,720px);align-items:flex-start;text-align:left;gap:0;margin:0}
+.gc-top .h{display:block}
+.gc-top .h span{margin:0!important;width:auto!important;height:auto!important;text-align:left;white-space:normal;background-image:linear-gradient(160deg,#fff 20%,#9c9c9f 100%);padding-bottom:.12em}
+.gc-top .h .a{font-size:clamp(22px,2.4cqw,42px);font-weight:300;line-height:1.1;letter-spacing:-.045em;background-image:linear-gradient(160deg,#c9c9cc 10%,#7d7d81 100%)}
+.gc-top .h .b{font-size:clamp(52px,7cqw,116px);font-weight:300;line-height:.98;letter-spacing:-.06em;margin:.4cqw 0 0 -.05em!important}
+html body .gc-top .gc-buy{margin-top:clamp(28px,3.2cqw,48px);background:#fff;color:#0a0a0a}
+html body .gc-top .gc-buy:hover{background:#e9e9ea}
+@media(min-width:900px){body:has(.hxw.gc) header.nav:not(.scrolled){--hdr-text:#fff}body:has(.hxw.gc) header.nav:not(.scrolled) .hd-logo .UKj7qa_root{color:#fff}body:has(.hxw.gc) header.nav:not(.scrolled) .uE8frq_trigger{border-color:rgba(255,255,255,.28)}}
+@media(max-width:899px){
+ .lh-st{width:190%;left:50%;top:auto;bottom:-2%;transform:translateX(-50%)}
+ .gc-top{left:0;right:0;top:15svh;transform:none;width:auto;align-items:center;text-align:center;padding:0 24px}
+ .gc-top .h span{text-align:center}
+ .gc-top .h .a{font-size:clamp(20px,6vw,28px)}.gc-top .h .b{font-size:clamp(46px,14.9vw,66px)}
+}
+/*DK-CSS-END*/
+
 /*FQD-CSS*/
 /* FAQ: dark two-column list, every answer open (matches the Ring PRO buy page) */
 html body #faq.fqd{background:#000;box-shadow:0 0 0 100vmax #000;clip-path:inset(0 -100vmax);color:#fff;padding:clamp(80px,10.4vw,150px) 0;margin:0}
@@ -2781,8 +2838,8 @@ function gsec({tag,pri,title,desc,facts,price,cta,href,how,vis,pastel,rev,mc,id,
 }
 const RENDER={AIR:'gring',PRO:'khero'};
 const DESIGNS=[{k:'gold',n:'Gold'},{k:'silver',n:'Silver'},{k:'rose',n:'Rose gold'},{k:'black',n:'Black'},{k:'champ',n:'Champagne'}];
-const CS_NAMES=['Maya Rao','Alex Chen','Priya Nair','Sam Carter','Leo Martin'];
-function giftCardHTML(k,o={}){const n=o.name||'Maya Rao';return `<div class="gcard ${k} ${o.cls||''}">${logoHTML}<div class="gc-mid"><small>A gift for</small><b>${esc(n)}</b></div><div class="gc-bot"><span>${o.ring||RINGS[S.ring].name}<em>Gift card</em></span><strong class="num">${o.amount||fmt(rp())}</strong></div></div>`}
+const CS_NAMES=['Jane Doe','Alex Chen','Priya Nair','Sam Carter','Leo Martin'];
+function giftCardHTML(k,o={}){const n=o.name||'Jane Doe';return `<div class="gcard ${k} ${o.cls||''}">${logoHTML}<div class="gc-mid"><small>A gift for</small><b>${esc(n)}</b></div><div class="gc-bot"><span>${o.ring||RINGS[S.ring].name}<em>Gift card</em></span><strong class="num">${o.amount||fmt(rp())}</strong></div></div>`}
 const crumb=l=>`<div style="padding:18px var(--gut) 0;font-size:13px;color:var(--ink-2)"><a href="#gifting" class="back-l">&larr; Gifting</a> <span style="margin:0 6px">/</span> <span style="color:#000">${l}</span></div>`;
 function faqAcc(items){return `<div class="acc">${items.map(([q,a])=>`<details><summary>${q}<i></i></summary><div class="a">${a}</div></details>`).join('')}</div>`}
 const sh=(t,sub,c='')=>`<div class="sh2 ${c}"><h2>${t}</h2>${sub?`<p>${sub}</p>`:''}</div>`;
@@ -2887,13 +2944,13 @@ function viewLanding(){
   const OCC={corp:[['Team milestones','A launch shipped, a round closed, a year done well.','corporate','Sizing kits'],['Client and partner gifts','Let them choose. You get the thanks.','vouchers','Vouchers'],['Leadership gifts','For the people who set the pace.','corporate','Sizing kits'],['Events and conferences','One code per attendee, no sizing, no shipping.','vouchers','Vouchers'],['Rewards and incentives','A target hit, a quarter closed.','vouchers','Vouchers'],['Festive season','Diwali, Eid, Christmas. One order for the whole list.','corporate','Sizing kits']],
    ind:[['Birthdays','The ring, their size, their finish.'],['Anniversaries','Something you both wear.'],['Festive season','Diwali, Eid, Christmas.'],['New beginnings','A new job, a new city, a new routine.'],['Parents','For the person who never tracks their own health.'],['Graduation','The first thing they buy themselves, bought for them.']]};
   return `
-  <section class="hxw gc" aria-label="Ultrahuman Gifting"><div class="lh" aria-hidden="true"><div class="lh-st"><div class="lh-bg"></div></div></div><div class="gc-ray" aria-hidden="true"></div><div class="gc-sh" aria-hidden="true"></div><div class="gc-top"><h1 class="h"><span class="a">Give the gift of</span><span class="b">Good Health.</span></h1><a class="btn btn-primary gc-buy" href="javascript:void(0)" onclick="(document.getElementById('paths')||document.querySelector('.gs')).scrollIntoView({behavior:'smooth'});return false">Buy Gift Card</a></div><div class="hx" id="hx"><div class="hx-s"><div class="hx-r"><div class="hx-c" style="--zb:calc(var(--ch)*.05);--dl:.06s;--y:calc(var(--ch)*-.66);--dz:calc(var(--ch)*.975);--e1:#3a3a40;--e2:#121214;--rx:0deg;--oy:100%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-gx" data-t="bl" data-i="tr" data-metal="black"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Maya Rao · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(14,14,26,0) 0,rgba(14,14,26,0) 8%,rgba(14,14,26,.5) 22%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--zb:calc(var(--ch)*.025);--dl:0s;--y:calc(var(--ch)*-.48);--dz:calc(var(--ch)*.667);--e1:#d9b0a1;--e2:#8a5f52;--rx:-32deg;--oy:100%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-si" data-t="bl" data-i="tr" data-metal="rose"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift sizing kit</span><span class="mc-t2">One ring per code</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(20,20,36,0) 0,rgba(20,20,36,0) 13%,rgba(20,20,36,.5) 30%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--sc:1.07;--y:calc(var(--ch)*0);--dz:calc(var(--ch)*0);--e1:#e3cb94;--e2:#8a6c33;--rx:0deg;--oy:50%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-au" data-t="bl" data-i="tr" data-metal="gold"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Maya Rao · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--zb:calc(var(--ch)*.025);--dl:0s;--y:calc(var(--ch)*.45);--dz:calc(var(--ch)*.635);--e1:#dcdde0;--e2:#6d6e73;--rx:32deg;--oy:0%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-sv" data-t="bl" data-i="tr" data-metal="silver"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Ring voucher</span><span class="mc-t2">Value $250 · 12 months</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(20,20,36,0) 0,rgba(20,20,36,.5) 73%,rgba(20,20,36,0) 90%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c" style="--zb:calc(var(--ch)*.05);--dl:.06s;--y:calc(var(--ch)*.65);--dz:calc(var(--ch)*.975);--e1:#3a3a40;--e2:#121214;--rx:0deg;--oy:0%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-gx" data-t="bl" data-i="tr" data-metal="black"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Maya Rao · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(14,14,26,0) 0,rgba(14,14,26,.5) 77%,rgba(14,14,26,0) 93%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div></div></div></div></section>
+  <section class="hxw gc" aria-label="Ultrahuman Gifting"><div class="lh" aria-hidden="true"><div class="lh-st"><div class="lh-bg"></div></div></div><div class="gc-ray" aria-hidden="true"></div><div class="gc-sh" aria-hidden="true"></div><div class="gc-top"><h1 class="h"><span class="a">Give the gift of</span><span class="b">Good Health.</span></h1><a class="btn btn-primary gc-buy" href="javascript:void(0)" onclick="(document.getElementById('paths')||document.querySelector('.gs')).scrollIntoView({behavior:'smooth'});return false">Buy Gift Card</a></div><div class="hx" id="hx"><div class="hx-s"><div class="hx-r"><div class="hx-c" style="--zb:calc(var(--ch)*.05);--dl:.06s;--y:calc(var(--ch)*-.66);--dz:calc(var(--ch)*.975);--e1:#3a3a40;--e2:#121214;--rx:0deg;--oy:100%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-gx" data-t="bl" data-i="tr" data-metal="black"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Jane Doe · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(14,14,26,0) 0,rgba(14,14,26,0) 8%,rgba(14,14,26,.5) 22%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--zb:calc(var(--ch)*.025);--dl:0s;--y:calc(var(--ch)*-.48);--dz:calc(var(--ch)*.667);--e1:#d9b0a1;--e2:#8a5f52;--rx:-32deg;--oy:100%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-si" data-t="bl" data-i="tr" data-metal="rose"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift sizing kit</span><span class="mc-t2">One ring per code</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(20,20,36,0) 0,rgba(20,20,36,0) 13%,rgba(20,20,36,.5) 30%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--sc:1.07;--y:calc(var(--ch)*0);--dz:calc(var(--ch)*0);--e1:#e3cb94;--e2:#8a6c33;--rx:0deg;--oy:50%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-au" data-t="bl" data-i="tr" data-metal="gold"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Jane Doe · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--zb:calc(var(--ch)*.025);--dl:0s;--y:calc(var(--ch)*.45);--dz:calc(var(--ch)*.635);--e1:#dcdde0;--e2:#6d6e73;--rx:32deg;--oy:0%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-sv" data-t="bl" data-i="tr" data-metal="silver"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Ring voucher</span><span class="mc-t2">Value $250 · 12 months</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(20,20,36,0) 0,rgba(20,20,36,.5) 73%,rgba(20,20,36,0) 90%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c" style="--zb:calc(var(--ch)*.05);--dl:.06s;--y:calc(var(--ch)*.65);--dz:calc(var(--ch)*.975);--e1:#3a3a40;--e2:#121214;--rx:0deg;--oy:0%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-gx" data-t="bl" data-i="tr" data-metal="black"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Jane Doe · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(14,14,26,0) 0,rgba(14,14,26,.5) 77%,rgba(14,14,26,0) 93%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div></div></div></div></section>
 
   <div class="gwrap"><section class="sec" id="paths">${sh('Three ways to give','One ring at the end of each. Pick the one that fits.','lft')}</section>
   <nav class="gtabs" id="gtabs" aria-label="Three ways to give"><div class="gt-p"><span class="gt-i"></span><button class="on" data-t="g-kit"><b>01</b>Gift sizing kits</button><button data-t="g-voucher"><b>02</b>Ring vouchers</button><button data-t="g-card"><b>03</b>Gift card</button></div></nav>
-  ${gsec({tag:'For teams · Most chosen',pri:true,title:'Gift sizing kits',desc:'Buy in bulk at a volume discount. Everyone sizes themselves at home, then picks their ring.',facts:['Up to 25% off with volume','Kits ship to you in 24 hours','Codes valid for 6 months'],price:`From <b class="num">${fmt(unit(100))}</b> per kit`,cta:'Build an order',href:'#corporate',how:'gsk',mc:1,id:'g-kit',vis:mcHTML('au','gold','Gift sizing kit','One ring per code')})}
-  ${gsec({soon:true,tag:'For teams',title:'Ring vouchers',desc:'Pick a value, get the codes, pass them on. No sizing and no shipping. They spend it on anything.',facts:['Seven values, up to 50 codes','Share by message or download as CSV','Balance stays on the code'],rev:true,mc:1,id:'g-voucher',vis:mcHTML('si','rose','Ring voucher','Value $250 · 12 months')})}
-  ${gsec({soon:true,tag:'For one person',title:'Gift card',desc:'Pay for the ring. They get an email with a code, then choose their own size and finish.',facts:['Full ring price, nothing extra','Sent now or on a date you pick','Pick a card design for the email'],mc:1,id:'g-card',vis:mcHTML('sv','silver','Gift card','For Maya Rao · Ring AIR')})}
+  ${gsec({tag:'For teams · Most chosen',pri:true,title:'Gift sizing kits',desc:'Buy in bulk at a volume discount. Everyone sizes themselves at home, then picks their ring.',facts:['Up to 25% off with volume','Kits ship to you in 24 hours','Codes valid for 6 months'],price:`From <b class="num">${fmt(unit(100))}</b> per kit`,cta:'Build an order',href:'#corporate',how:'gsk',mc:1,id:'g-kit',vis:mcHTML('bm','matte','Gift sizing kit','One ring per code')})}
+  ${gsec({soon:true,tag:'For teams',title:'Ring vouchers',desc:'Pick a value, get the codes, pass them on. No sizing and no shipping. They spend it on anything.',facts:['Seven values, up to 50 codes','Share by message or download as CSV','Balance stays on the code'],rev:true,mc:1,id:'g-voucher',vis:mcHTML('bb','brushed','Ring voucher','Value $250 · 12 months')})}
+  ${gsec({soon:true,tag:'For one person',title:'Gift card',desc:'Pay for the ring. They get an email with a code, then choose their own size and finish.',facts:['Full ring price, nothing extra','Sent now or on a date you pick','Pick a card design for the email'],mc:1,id:'g-card',vis:mcHTML('bg','gloss','Gift card','For Jane Doe · Ring AIR')})}
 </div>
 
   <section class="sec fx dk">${sh('A gift that keeps giving back','Every morning, not just the day it is opened.','lft')}
@@ -2982,7 +3039,7 @@ function openHow(k){
     {t:'Their ring, their story',d:`Once redeemed, their Ultrahuman ${rn} is made just for them: perfectly sized, engraved, and ready to take their health journey to the next level.`,img:'gengr',chips:['Made for them']}]}:STEPS[k];
   const tc=k==='gc'?[`The Gift Card is sold at the price shown at purchase.`,`The Gift Card is applicable to the Ultrahuman ${rn} only.`,`The Gift Card includes free engraving, optional during redemption by the recipient.`,`The Gift Card is valid for 1 year from the date of purchase and is for one-time use only.`,`The Gift Card is redeemable only on the store it was issued on, via the <a href="#redeem" onclick="closeSheet()">dedicated redemption page</a>.`]:TC[k];
   const meta={gc:{img:'gcard',n:'Gift Card · '+rn,p:fmt(rp()),cta:'Gift '+rn,to:'#gift-card'},gsk:{img:'kit1',n:'Gift Sizing Kit',p:'From '+fmt(unit(100)),cta:'Buy kits',to:'#corporate'},voucher:{img:'gcard',n:'Ring Voucher',p:'From '+fmt(st().bands[0]),cta:'Choose a value',to:'#vouchers'}}[k];
-  const card=k==='gc'?mcHTML('au','gold','Gift card','For Maya Rao · '+rn):k==='voucher'?mcHTML('si','rose','Ring voucher','Value $250 · 12 months'):mcHTML('au','gold','Gift sizing kit','One ring per code');
+  const card=k==='gc'?mcHTML('bg','gloss','Gift card','For Jane Doe · '+rn):k==='voucher'?mcHTML('bb','brushed','Ring voucher','Value $250 · 12 months'):mcHTML('bm','matte','Gift sizing kit','One ring per code');
   sheetOpen(`<button class="sheet-x" onclick="closeSheet()" aria-label="Close">&times;</button>
   <div class="sheet-head"><div class="pthumb"><img src="${IMG[meta.img]}" alt=""><div><b>${meta.n}</b><span class="num">${meta.p}</span></div></div><div class="rt"><a class="btn btn-primary" onclick="closeSheet()" href="${meta.to}">${meta.cta}</a></div></div>
   <div class="hw2"><header class="hw2-top"><span class="hw-k">${HWK[k]}</span><h2>${H.title}</h2><p>${H.sub}</p>${k==='gsk'?`<span class="hw-badge">Ships in 24 hours</span>`:''}</header>
@@ -3080,11 +3137,11 @@ function viewWays(){
   const AR='<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg>';
   const T=[
    {href:'#corporate',tag:'For teams · Most chosen',h:'Gift sizing kits',lead:'Buy in bulk at a volume discount. Everyone sizes themselves at home, then picks their ring.',
-    st:[['Buy in bulk','Up to 25% off with volume.'],['Everyone sizes at home','Kits ship to you in 24 hours.'],['They pick their ring','Each code is valid for 6 months.']],cta:'Build an order',pr:`From <span class="num">${fmt(unit(100))}</span> per kit`,card:mcHTML('au','gold','Gift sizing kit','One ring per code')},
+    st:[['Buy in bulk','Up to 25% off with volume.'],['Everyone sizes at home','Kits ship to you in 24 hours.'],['They pick their ring','Each code is valid for 6 months.']],cta:'Build an order',pr:`From <span class="num">${fmt(unit(100))}</span> per kit`,card:mcHTML('bm','matte','Gift sizing kit','One ring per code')},
    {href:'#vouchers',tag:'For teams',h:'Ring vouchers',lead:'Pick a value, get the codes, pass them on. No sizing and no shipping.',
-    st:[['Pick a value','Seven values, up to 50 codes.'],['Share the codes','By message, or download as CSV.'],['They spend it on anything','The balance stays on the code.']],cta:'Explore vouchers',pr:'Up to 50 codes',card:mcHTML('si','rose','Ring voucher','Value $250 · 12 months')},
+    st:[['Pick a value','Seven values, up to 50 codes.'],['Share the codes','By message, or download as CSV.'],['They spend it on anything','The balance stays on the code.']],cta:'Explore vouchers',pr:'Up to 50 codes',card:mcHTML('bb','brushed','Ring voucher','Value $250 · 12 months')},
    {href:'#gift-card',tag:'For one person',h:'Gift card',lead:'Pay for the ring. They choose their own size and finish.',
-    st:[['You pay for the ring','Full ring price, nothing extra.'],['They get an email','Sent now, or on a date you pick.'],['They choose size and finish','Pick a card design for the email.']],cta:'Send a gift card',pr:'Full ring price',card:mcHTML('sv','silver','Gift card','For Maya Rao · Ring AIR')}];
+    st:[['You pay for the ring','Full ring price, nothing extra.'],['They get an email','Sent now, or on a date you pick.'],['They choose size and finish','Pick a card design for the email.']],cta:'Send a gift card',pr:'Full ring price',card:mcHTML('bg','gloss','Gift card','For Jane Doe · Ring AIR')}];
   return `${crumb('Three ways to give')}
   <main class="wy">
    <header class="wy-h"><h1>Three ways to give</h1><p>One ring at the end of each. Pick the one that fits.</p></header>
@@ -3149,7 +3206,7 @@ function buyShell({gal,title,price,chips,secs,sum,bar}){
   <button class="bb-cta" onclick="${bar.on}">${bar.cta}</button></div></div>`;
 }
 function gpWhen(w){S.gc.when=w;document.querySelectorAll('#gwhen .bp-row').forEach((b,i)=>b.classList.toggle('sel',(i===0)===(w==='now')))}
-function gpDesign(k){const n=DESIGNS.find(d=>d.k===k);const c=document.getElementById('gcn');if(c&&n)c.textContent=n.n;S.gc.design=k;const st=$('#gstage');if(st)st.innerHTML=giftCardHTML(k,{name:'Maya Rao',cls:'swap'});document.querySelectorAll('.bp-sw button').forEach(b=>{const on=b.getAttribute('onclick').includes("'"+k+"'");b.classList.toggle('on',on);b.setAttribute('aria-checked',on)})}
+function gpDesign(k){const n=DESIGNS.find(d=>d.k===k);const c=document.getElementById('gcn');if(c&&n)c.textContent=n.n;S.gc.design=k;const st=$('#gstage');if(st)st.innerHTML=giftCardHTML(k,{name:'Jane Doe',cls:'swap'});document.querySelectorAll('.bp-sw button').forEach(b=>{const on=b.getAttribute('onclick').includes("'"+k+"'");b.classList.toggle('on',on);b.setAttribute('aria-checked',on)})}
 function goBuilder(){const b=$('#builder');if(b)b.scrollIntoView({behavior:'smooth',block:'start'});else window.scrollTo(0,0)}
 function gskSet(v,typing){let n=parseInt(v,10);if(isNaN(n)||n<1)n=1;if(n>1000)n=1000;S.gsk.qty=n;if(!typing)$('#gq').value=n;paintGsk()}
 function gskQty(d){gskSet(S.gsk.qty+d)}
@@ -3217,7 +3274,7 @@ function viewGift(){
   if(!S.gc.design)S.gc.design='gold';
   return `${crumb('Gift card')}
   ${bpPage({
-    gal:`<div class="bp-gal gcal" id="gal" data-n="1" data-i="0"><div class="bg-slides"><div class="bg-s on"><div class="gstage" id="gstage">${giftCardHTML(S.gc.design,{name:'Maya Rao'})}</div></div></div><div class="bg-glass"><span>Sent by email</span><i></i><span>Valid 12 months</span><i></i><span>They choose size and finish</span></div></div>`,
+    gal:`<div class="bp-gal gcal" id="gal" data-n="1" data-i="0"><div class="bg-slides"><div class="bg-s on"><div class="gstage" id="gstage">${giftCardHTML(S.gc.design,{name:'Jane Doe'})}</div></div></div><div class="bg-glass"><span>Sent by email</span><i></i><span>Valid 12 months</span><i></i><span>They choose size and finish</span></div></div>`,
     title:'Gift card',
     price:`${ringKeys().length>1?'<small>from</small> ':''}${fmt(minRing())} <small>the full ring price</small>`,
     payRow:`<div class="bp-pay"><span class="bp-pl"><i style="background:#007ff5"></i><i style="background:#6fbaff"></i></span><span>Pay by card, UPI or bank transfer</span></div>`,
@@ -3252,7 +3309,7 @@ function gfield(id,label,ph,type){const v=S.gc[id],bad=S.touched[id]&&GERR[id](v
 function giftSheet(){
   const g=S.gc,s=S.gcStep,total=rp();
   const body={1:`<div class="stepl">Step 1 of 3</div><h2>Who is the gift card for?</h2><p class="sub">A thoughtful surprise that never feels last-minute.</p>
-      <span class="lbl" style="font-size:13px;color:var(--ink-2);display:block;margin-bottom:10px">Card design</span><div class="dz" role="radiogroup" aria-label="Card design">${DESIGNS.map(d=>`<button type="button" class="dz-i ${g.design===d.k?'on':''}" role="radio" aria-checked="${g.design===d.k}" onclick="gcDesign('${d.k}')"><span class="gcard mini ${d.k}"></span><span>${d.n}</span></button>`).join('')}</div>${gfield('rName','Their name','Maya Rao')}${gfield('rEmail','Their email','maya@email.com','email')}
+      <span class="lbl" style="font-size:13px;color:var(--ink-2);display:block;margin-bottom:10px">Card design</span><div class="dz" role="radiogroup" aria-label="Card design">${DESIGNS.map(d=>`<button type="button" class="dz-i ${g.design===d.k?'on':''}" role="radio" aria-checked="${g.design===d.k}" onclick="gcDesign('${d.k}')"><span class="gcard mini ${d.k}"></span><span>${d.n}</span></button>`).join('')}</div>${gfield('rName','Their name','Jane Doe')}${gfield('rEmail','Their email','maya@email.com','email')}
       <div class="field"><label for="msg"><span>Personal message <span style="opacity:.6">(optional)</span></span><span class="num" id="cnt">${g.msg.length} / 200</span></label><textarea class="inp" id="msg" maxlength="200" placeholder="Happy birthday. Sleep well." oninput="gcIn('msg',this.value)">${esc(g.msg)}</textarea></div>`,
     2:`<div class="stepl">Step 2 of 3</div><h2>When should it arrive?</h2><p class="sub">The code is created when you pay. We hold the email until the day you pick.</p>
       <div class="opt"><button class="${g.when==='now'?'on':''}" onclick="gcWhen('now')"><b>Right away</b><span>Sent after payment</span></button><button class="${g.when==='date'?'on':''}" onclick="gcWhen('date')"><b>On a date</b><span>Pick a day</span></button></div>
@@ -3265,7 +3322,7 @@ function giftSheet(){
     <div class="gnav">${s>1?`<button type="button" class="back" onclick="gcBack()">&larr; Back</button>`:''}<button type="submit" id="gcta" class="btn btn-primary btn-lg ${GV[s]()?'':'is-off'}" style="flex:1;max-width:320px">${s<3?'Continue':'Continue to payment'}</button></div></form>
     <div class="pv"><div id="gprev">${gcPreview()}</div><p class="small muted" style="margin-top:14px;text-align:center" id="gwhen">${g.when==='now'?'Delivered right after payment':g.date?'Held until '+fmtD(g.date):'Pick a send date'}</p></div></div></div>`;
 }
-function gcPreview(){const g=S.gc;return `<div class="email" data-tilt><div class="bar"><i></i><i></i><i></i></div><div class="bd"><div class="stage">${giftCardHTML(g.design||'gold',{name:g.rName.trim()?g.rName.trim():'Maya Rao',cls:S._swap?'swap':''})}</div><div class="in">${logoHTML}<div class="to">${g.rName.trim()?esc(g.rName.trim().split(' ')[0]):'Maya'},<br>a gift for you.</div><div class="msg">${g.msg?'“'+esc(g.msg)+'”':'“Your message appears here.”'}</div><div style="font-size:12px;color:rgba(255,255,255,.6)">${g.gName.trim()?'From '+esc(g.gName.trim())+' &middot; ':''}${RINGS[S.ring].name}</div><div class="code"><span>UH-GIFT-••••-••••</span><span class="pill-sm" style="background:#fff;color:#000;height:24px">Redeem</span></div></div></div></div>`}
+function gcPreview(){const g=S.gc;return `<div class="email" data-tilt><div class="bar"><i></i><i></i><i></i></div><div class="bd"><div class="stage">${giftCardHTML(g.design||'gold',{name:g.rName.trim()?g.rName.trim():'Jane Doe',cls:S._swap?'swap':''})}</div><div class="in">${logoHTML}<div class="to">${g.rName.trim()?esc(g.rName.trim().split(' ')[0]):'Jane'},<br>a gift for you.</div><div class="msg">${g.msg?'“'+esc(g.msg)+'”':'“Your message appears here.”'}</div><div style="font-size:12px;color:rgba(255,255,255,.6)">${g.gName.trim()?'From '+esc(g.gName.trim())+' &middot; ':''}${RINGS[S.ring].name}</div><div class="code"><span>UH-GIFT-••••-••••</span><span class="pill-sm" style="background:#fff;color:#000;height:24px">Redeem</span></div></div></div></div>`}
 function gcIn(k,v){S.gc[k]=v;const f=$('#f_'+k);if(f&&S.touched[k]){const m=GERR[k]?GERR[k](v):'';f.classList.toggle('bad',!!m);$('#e_'+k).textContent=m}
   if(k==='msg')$('#cnt').textContent=v.length+' / 200';
   $('#gprev').innerHTML=gcPreview();$('#gwhen').textContent=S.gc.when==='now'?'Delivered right after payment':S.gc.date?'Held until '+fmtD(S.gc.date):'Pick a send date';
@@ -3313,7 +3370,7 @@ function paintPay(){const ok=coValid();['payTop','payBtn'].forEach(i=>{const b=$
 function defaultCart(type){
   const q=S.gsk.qty;
   if(type==='voucher')return{type,band:S.v.band,qty:S.v.qty,total:S.v.band*S.v.qty,store:S.store};
-  if(type==='giftcard')return{type,design:'gold',ring:S.ring,total:rp(),store:S.store,rName:'Maya Rao',rEmail:'maya@email.com',msg:'Happy birthday. Sleep well.',when:'now',date:'',gName:'Sam Carter',gEmail:'sam@email.com'};
+  if(type==='giftcard')return{type,design:'gold',ring:S.ring,total:rp(),store:S.store,rName:'Jane Doe',rEmail:'maya@email.com',msg:'Happy birthday. Sleep well.',when:'now',date:'',gName:'Sam Carter',gEmail:'sam@email.com'};
   return{type:'corporate',ring:S.ring,qty:q,unit:unit(q),list:rp()*q,total:unit(q)*q,pct:band(q).pct,store:S.store};
 }
 function makeOrder(c,demo){
@@ -3608,6 +3665,9 @@ const P={
  rose:{dark:[.60,.38,.33],mid:[.80,.61,.54],light:[.96,.84,.78],fr:1.5,st:.25,q0:-.02,ec:[.96,.84,.78],es:.9,rim:.12,gr:.035},
  gold:{dark:[.30,.19,.05],mid:[.70,.54,.26],light:[.93,.81,.52],fr:.7,st:.15,q0:-.02,ec:[.90,.80,.58],es:.8,rim:.12,gr:.03},
  silver:{dark:[.50,.51,.55],mid:[.73,.74,.77],light:[.91,.91,.94],fr:1.4,st:.2,q0:-.02,ec:[1.0,1.0,1.0],es:.9,rim:0,gr:.03},
+ matte:{dark:[.03,.03,.034],mid:[.095,.095,.105],light:[.2,.2,.22],fr:0,st:.02,q0:-.02,ec:[.8,.8,.82],es:.7,rim:0,gr:.04,ln:0},
+ brushed:{dark:[.03,.03,.034],mid:[.095,.095,.105],light:[.2,.2,.22],fr:0,st:.02,q0:-.02,ec:[.8,.8,.82],es:.7,rim:0,gr:.04,ln:2},
+ gloss:{dark:[.03,.03,.034],mid:[.095,.095,.105],light:[.3,.3,.32],fr:.05,st:.17,q0:-.02,ec:[.85,.85,.87],es:.8,rim:0,gr:.008,ln:0},
  black:{dark:[.045,.045,.05],mid:[.125,.125,.135],light:[.42,.42,.44],fr:.2,st:.24,q0:-.02,ec:[.82,.82,.84],es:1.0,rim:0,gr:.05}
 };
 function init(c){
@@ -3651,10 +3711,11 @@ function init(c){
   c.width=w;c.height=h;gl.viewport(0,0,w,h);
   gl.uniform2f(U('uRes'),w,h);gl.uniform1f(U('uDpr'),dpr);
   gl.uniform3fv(U('uDark'),pr.dark);gl.uniform3fv(U('uMid'),pr.mid);gl.uniform3fv(U('uLight'),pr.light);
-  gl.uniform1f(U('uFringe'),pr.fr);gl.uniform1f(U('uStrength'),pr.st);gl.uniform1f(U('uQ0'),pr.q0);gl.uniform3fv(U('uEdgeC'),pr.ec);gl.uniform1f(U('uEdgeS'),pr.es);gl.uniform1f(U('uRim'),pr.rim);gl.uniform1f(U('uGrain'),pr.gr);gl.uniform1f(U('uLine'),window.LINE||0);gl.uniform1f(U('uBevel'),card.closest('.hx')?1:0);
+  gl.uniform1f(U('uFringe'),pr.fr);gl.uniform1f(U('uStrength'),pr.st);gl.uniform1f(U('uQ0'),pr.q0);gl.uniform3fv(U('uEdgeC'),pr.ec);gl.uniform1f(U('uEdgeS'),pr.es);gl.uniform1f(U('uRim'),pr.rim);gl.uniform1f(U('uGrain'),pr.gr);gl.uniform1f(U('uLine'),pr.ln!=null?pr.ln:(window.LINE||0));gl.uniform1f(U('uBevel'),card.closest('.hx')?1:0);
   render();paintOv();
  }
  function render(){
+  card.style.setProperty('--la',(-30+st.tx*80-st.ty*30+st.sw*100).toFixed(1)+'deg');card.style.setProperty('--mx',(50+st.tx*34).toFixed(1)+'%');card.style.setProperty('--my',(38+st.ty*34+st.sw*10).toFixed(1)+'%');
   gl.uniform2f(U('uTilt'),st.tx,st.ty);gl.uniform1f(U('uHolo'),st.h);gl.uniform1f(U('uSw'),st.sw);gl.uniform1f(U('uSa'),st.sa);
   gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
  }
