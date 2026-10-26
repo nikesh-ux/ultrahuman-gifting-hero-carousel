@@ -1774,7 +1774,7 @@ body[data-lp="0"] .bp-card li{letter-spacing:-.14px;color:rgba(0,0,0,.7)}
 .pv .small.muted{color:rgba(0,0,0,.5)}
 .gcard.mini.gold{--sw:linear-gradient(180deg,#ffefaa,#a07a14)}.gcard.mini.silver{--sw:linear-gradient(180deg,#f0f0f0,#a8a8a8)}.gcard.mini.rose{--sw:linear-gradient(180deg,#f8d9cf,#b0675a)}.gcard.mini.black{--sw:linear-gradient(180deg,#3a3840,#080708)}.gcard.mini.champ{--sw:linear-gradient(180deg,#f3e8cc,#b79d63)}
 /*MC-CSS*/
-.mc{--mk:url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBvdmVyZmxvdz0idmlzaWJsZSIgc3R5bGU9ImRpc3BsYXk6IGJsb2NrOyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGlkPSJMb2dvIj4KPHBhdGggaWQ9IlZlY3RvciIgZD0iTTIzLjk4NjYgOUg5LjAxMzQzVjE0LjM5NzZIMTIuMDE5NEw3IDE5LjAwOEwxMC42ODY2IDIzTDE2LjQ3MTYgMTcuNzcxMUwyMi4zMTM0IDIzTDI2IDE5LjAwOEwyMC45NTIyIDE0LjM5NzZIMjMuOTg2NlY5WiIgZmlsbD0iYmxhY2siLz4KPC9nPgo8L3N2Zz4K);position:relative;width:100%;aspect-ratio:1.64;border-radius:12px;container-type:inline-size;overflow:hidden;isolation:isolate;background:var(--base);
+.mc{--mk:url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBvdmVyZmxvdz0idmlzaWJsZSIgc3R5bGU9ImRpc3BsYXk6IGJsb2NrOyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGlkPSJMb2dvIj4KPHBhdGggaWQ9IlZlY3RvciIgZD0iTTIzLjk4NjYgOUg5LjAxMzQzVjE0LjM5NzZIMTIuMDE5NEw3IDE5LjAwOEwxMC42ODY2IDIzTDE2LjQ3MTYgMTcuNzcxMUwyMi4zMTM0IDIzTDI2IDE5LjAwOEwyMC45NTIyIDE0LjM5NzZIMjMuOTg2NlY5WiIgZmlsbD0iYmxhY2siLz4KPC9nPgo8L3N2Zz4K);position:relative;width:100%;aspect-ratio:1.64;border-radius:3.5%/5.74%;container-type:inline-size;overflow:hidden;isolation:isolate;background:var(--base);
  box-shadow:0 2px 4px rgba(0,0,0,.12),0 18px 28px -14px rgba(0,0,0,.28)}
 .mc>*{position:absolute}
 .mc-stage{display:grid;place-items:center;width:100%;perspective:900px;perspective-origin:50% 50%}
@@ -1970,6 +1970,14 @@ body[data-lp] .gs:not(#paths) .gpanel .gvis.mcs{aspect-ratio:auto!important;min-
 @media(max-width:900px){.gfx .gcf{width:min(150%,760px)}}
 /* metal finish on the gold card: soft broad reflection that only moves with the pointer, and a darker falloff toward the lower right */
 .gcf .gc-lt::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(118deg,rgba(255,246,222,0) 18%,rgba(255,244,214,.10) 34%,rgba(255,250,236,.22) 46%,rgba(255,244,214,.08) 58%,rgba(255,246,222,0) 74%),linear-gradient(160deg,rgba(40,24,4,0) 52%,rgba(40,24,4,.2) 100%);background-size:180% 100%,100% 100%;background-repeat:no-repeat;background-position:calc(50% + var(--tx,0)*18%) 0,0 0}
+/* phones: the card panels are less tall and the cards fill them */
+@media(max-width:899px){
+ body[data-lp] .gs:not(#paths) .gpanel .gvis.mcs{min-height:0!important;aspect-ratio:4/3!important;padding:14px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden}
+ .gvis.mcs .mc-stage{width:100%}
+ .gvis.mcs .mc-stage .mc{width:94%!important}
+ .gvis.mcs .gcf{width:min(196%,720px)!important}
+ .gvis.mcs{--bxs:clamp(140px,48vw,190px)}
+}
 /*GCF-CSS-END*/
 
 
@@ -3962,7 +3970,7 @@ void main(){
   col+=uLight*0.055*ridge*(0.35+0.9*bm);
  }
  /* glassy lit edge: top-left catches the light, bottom-right falls away */
- vec2 px=fc-uRes*.5, hs=uRes*.5; float r=12.*uDpr; float d=sdRB(px,hs,r);
+ vec2 px=fc-uRes*.5, hs=uRes*.5; float r=uRes.x*.035; float d=sdRB(px,hs,r);
  vec2 e=vec2(1.,0.);
  vec2 n=normalize(vec2(sdRB(px+e,hs,r)-sdRB(px-e,hs,r),sdRB(px+e.yx,hs,r)-sdRB(px-e.yx,hs,r))+1e-5);
  float lit=clamp(dot(n,normalize(vec2(-1.-uTilt.x*1.1,-1.-uTilt.y*1.1)))*.5+.5,0.,1.);
