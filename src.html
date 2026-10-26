@@ -1826,6 +1826,153 @@ body[data-lp] .gs:not(#paths) .gpanel .gvis.mcs{aspect-ratio:auto!important;min-
 /* guilloche: two sets of fine engraved rings overlap into a soft moire wave, under a faint sheen */
 .mc-bg::after{background:repeating-radial-gradient(circle at 18% 38%,rgba(255,255,255,.07) 0 .7px,transparent .7px 4.5px),repeating-radial-gradient(circle at 82% 66%,rgba(255,255,255,.07) 0 .7px,transparent .7px 4.5px),linear-gradient(112deg,transparent 30%,rgba(255,255,255,.05) 44%,transparent 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 -1px 0 rgba(0,0,0,.5)}
 /*BK-CSS-END*/
+/*GF-CSS*/
+/* tokens from the Performance Lab Web booking flow (Figma 6072:13841): page #f8f7f1, panel #e9e7e2, hairline rgba(0,0,0,.15), brand blue #112baf */
+.gfx{--gf-bg:#fafafa;--gf-pn:#ececee;--gf-ln:rgba(0,0,0,.15);--gf-ink:#212121;--gf-mu:#6b6b6b;--gf-bl:#112baf;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:calc(100svh - var(--gfn,57px));margin-top:0!important;background:var(--gf-bg);color:var(--gf-ink);font-family:Geist,system-ui,sans-serif}
+.gf-v{position:sticky;top:var(--gfn,57px);height:calc(100svh - var(--gfn,57px));box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;overflow:hidden;background:var(--gf-pn);isolation:isolate}
+.gf-back{position:absolute;left:40px;top:40px;display:inline-flex;align-items:center;gap:8px;font:400 14px/1 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-mu);text-decoration:none}
+.gf-back:hover{color:var(--gf-ink)}
+.gf-card{width:100%;display:grid;place-items:center}
+.gf-card .mc-stage .mc{width:min(74.5%,640px);border-radius:24px}
+.gf-perks{display:none}
+.gf-p{padding:40px 32px 80px;max-width:800px;width:100%;box-sizing:border-box}
+.gf-p h1{font:400 24px/normal Geist,system-ui,sans-serif;letter-spacing:-.025em;margin:0;color:var(--gf-ink)}
+.gf-sub{margin:6px 0 44px;font:400 16px/normal Geist,system-ui,sans-serif;letter-spacing:-.019em;color:var(--gf-mu)}
+#gfp{display:grid;gap:8px}
+.gf-s{border:1px solid var(--gf-ln);border-radius:16px;background:transparent;scroll-margin-top:calc(var(--gfn,57px) + 14px)}
+.gf-h{display:flex;align-items:flex-start;gap:16px;padding:32px}
+.gf-s.open .gf-h{padding-bottom:24px}
+.gf-n{flex:none;width:28px;height:28px;box-sizing:border-box;border-radius:50%;border:1px solid #000;display:grid;place-items:center;font:500 13px/1 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:#000}
+.gf-n.ok{background:var(--gf-ink);border-color:#000}
+.gf-t{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}.gf-t b{display:block;font:400 20px/normal Geist,system-ui,sans-serif;letter-spacing:-.03em;color:var(--gf-ink)}
+.gf-t small{display:block;font:400 14px/1.5 Geist,system-ui,sans-serif;letter-spacing:-.021em;color:var(--gf-mu)}
+.gf-s:not(.open):not(.done) .gf-t b{color:var(--gf-ink)}
+.gf-e{all:unset;cursor:pointer;font:400 14px/24px Geist,system-ui,sans-serif;letter-spacing:-.04em;color:var(--gf-ink);text-decoration:underline;text-decoration-color:rgba(33,33,33,.5);text-underline-offset:3px}
+.gf-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.7,.2,1)}
+.gf-s.open .gf-b{grid-template-rows:1fr}
+.gf-bi{min-height:0;overflow:hidden;padding:0 32px;opacity:0;transition:opacity .3s}
+.gf-s.open .gf-bi{padding-bottom:32px;opacity:1;transition:opacity .4s .12s}
+.gf-lb{font:400 14px/1 Geist,system-ui,sans-serif;margin:22px 0 12px;color:var(--gf-ink)}
+.gf-rs{display:grid;gap:8px;margin-bottom:32px}
+.gf-r{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:16px;width:100%;padding:20px;border:1px solid var(--gf-ln);border-radius:12px;transition:border-color .2s,background .2s}
+.gf-r:hover{border-color:rgba(0,0,0,.35)}
+.gf-r.sel{border:1.8px solid var(--gf-bl);padding:19.2px;background:rgba(17,43,175,.02)}
+.gf-r:focus-visible{outline:2px solid var(--gf-bl);outline-offset:2px}
+.gf-rd{flex:none;box-sizing:border-box;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--gf-ln);display:grid;place-items:center}
+.gf-r.sel .gf-rd{background:var(--gf-bl);border-color:var(--gf-bl)}.gf-r.sel .gf-rd::after{content:"";width:6px;height:6px;border-radius:3px;background:var(--gf-bg)}
+.gf-rt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.gf-rt b{display:flex;align-items:center;gap:8px;font:400 16px/1.4 Geist,system-ui,sans-serif;letter-spacing:-.037em;color:var(--gf-ink)}
+.gf-rt small{display:block;font:400 15px/normal Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-mu)}
+.gf-tag{font:400 10px/14px Geist,system-ui,sans-serif;font-style:normal;color:#fff;background:var(--gf-bl);padding:4px 5px 5px;border-radius:2px;letter-spacing:-.06em;white-space:nowrap}
+.gf-rp{display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap}.gf-rp b{font:400 16px/1.4 Geist,system-ui,sans-serif;letter-spacing:-.037em;color:var(--gf-ink)}
+.gf-rp small,.gf-rp s{font:400 15px/normal Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-mu)}
+.gf-c{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;width:128px;height:40px;border-radius:50px;border:1px solid rgba(255,255,255,.16);background:var(--gf-bl);color:#fff;font:500 14px/24px Geist,system-ui,sans-serif;letter-spacing:-.02em;transition:opacity .2s,background .2s}
+.gf-c.wide{width:auto;padding:0 25px}
+.gf-c:hover:not(:disabled){background:#0d2290}.gf-c:disabled{opacity:.4;cursor:not-allowed}.gf-c:focus-visible{outline:2px solid #111;outline-offset:3px}
+.gf-fm{display:grid;gap:16px;margin-bottom:32px}
+.gf-grp{border:1px solid var(--gf-ln);border-radius:12px;overflow:hidden}
+.gf-grp>.gf-f,.gf-grp>.gf-r2{border-top:1px solid var(--gf-ln)}.gf-grp>:first-child{border-top:0}
+.gf-r2{display:grid;grid-template-columns:1fr 1fr}.gf-r2>.gf-f+.gf-f{border-left:1px solid var(--gf-ln)}
+.gf-f{display:flex;flex-direction:column;justify-content:center;gap:2px;position:relative;height:64px;box-sizing:border-box;padding:0 16px;background:transparent;transition:box-shadow .2s;min-width:0}
+.gf-f:focus-within{box-shadow:inset 0 0 0 1.5px var(--gf-bl);z-index:1}
+.gf-f>span{font:400 12px/normal Geist,system-ui,sans-serif;letter-spacing:-.017em;color:var(--gf-mu)}
+.gf-f input,.gf-f select{all:unset;box-sizing:border-box;width:100%;font:400 16px/1.4 Geist,system-ui,sans-serif;letter-spacing:-.037em;color:var(--gf-ink)}
+.gf-f input::placeholder{color:#b5b5b0}
+.gf-box{border:1px solid var(--gf-ln);border-radius:12px}
+.gf-sel select{cursor:pointer;padding-right:28px}.gf-sel::after{content:"";position:absolute;right:18px;top:50%;width:7px;height:7px;border-right:1.5px solid #6b6b6b;border-bottom:1.5px solid #6b6b6b;transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.gf-f.bad{box-shadow:inset 0 0 0 1.5px #c0392b}.gf-er{position:absolute;right:16px;top:10px;font:400 12px/1.2 Geist,system-ui,sans-serif;font-style:normal;color:#c0392b}.gf-er:empty{display:none}
+.gf-ta{display:block;position:relative;border:1px solid var(--gf-ln);border-radius:12px;padding:16px 16px 36px}
+.gf-ta:focus-within{box-shadow:inset 0 0 0 1.5px var(--gf-bl)}
+.gf-ta textarea{all:unset;box-sizing:border-box;display:block;width:100%;min-height:96px;font:400 16px/1.4 Geist,system-ui,sans-serif;letter-spacing:-.037em;color:var(--gf-ink);white-space:pre-wrap}
+.gf-ta textarea::placeholder{color:#b5b5b0}
+.gf-ct{position:absolute;right:16px;bottom:14px;font:400 12px/1 Geist,system-ui,sans-serif;font-style:normal;color:var(--gf-mu)}
+.gf-q{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:-16px 0 32px;padding:14px 20px;border:1px dashed rgba(0,0,0,.25);border-radius:12px;font:400 15px/1 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-ink)}
+.gf-q>div{display:flex;align-items:center;gap:8px}.gf-q button{all:unset;cursor:pointer;width:32px;height:32px;box-sizing:border-box;border-radius:50%;border:1px solid var(--gf-ln);display:grid;place-items:center;font-size:18px}.gf-q button:hover{border-color:#111}
+.gf-q input{all:unset;width:56px;text-align:center;font:400 16px/1 Geist,system-ui,sans-serif}.gf-q input::-webkit-outer-spin-button,.gf-q input::-webkit-inner-spin-button{-webkit-appearance:none}
+.gf-note{margin:0 0 24px;font:400 14px/1.5 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-mu)}
+.gf-note b{color:var(--gf-ink);font-weight:500}
+.gf-rs+.gf-note,.gf-q+.gf-note{margin-top:-16px}
+.gf-sum{border:1px solid var(--gf-ln);border-radius:12px;padding:20px 20px 4px;margin-bottom:24px}
+.gf-sum .sl{display:flex;justify-content:space-between;gap:16px;padding:0 0 16px;font:400 14px/1.4 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-mu)}
+.gf-sum .sl .num{color:var(--gf-ink)}.gf-sum .sl.save{color:var(--gf-mu)}
+.gf-sum .sl.t{border-top:1px solid var(--gf-ln);padding:16px 0 20px;margin-top:4px;font:500 16px/1.2 Geist,system-ui,sans-serif;letter-spacing:-.03em;color:var(--gf-ink);align-items:baseline}
+.gf-sum .sl.t .num{font:500 16px/1.2 Geist,system-ui,sans-serif}
+@media(max-width:900px){
+ .gfx{grid-template-columns:1fr}
+ .gf-v{position:relative;top:0;height:auto;min-height:320px;padding:56px 0 28px}
+ .gf-back{left:16px;top:16px}
+ .gf-card .mc-stage .mc{width:min(70%,360px)}
+ .gf-p{padding:24px 16px 56px;max-width:none}
+ .gf-sub{margin-bottom:24px}
+ .gf-h{padding:20px}.gf-bi{padding:0 20px}.gf-s.open .gf-bi{padding-bottom:24px}
+ .gf-r{padding:16px;gap:12px}.gf-r.sel{padding:15.2px}
+ .gf-r2{grid-template-columns:1fr}.gf-r2>.gf-f+.gf-f{border-left:0;border-top:1px solid var(--gf-ln)}
+}
+@media(prefers-reduced-motion:reduce){.gf-b,.gf-bi{transition:none}}
+/* one screen: the page itself never scrolls, the steps scroll inside their own column */
+@media(min-width:901px){
+ html:has(.gfx),body:has(.gfx){overflow:hidden}
+ .gfx{height:calc(100svh - var(--gfn,57px));min-height:0;overflow:hidden}
+ .gfx .gf-v{position:relative;top:0;height:100%}
+ .gfx .gf-p{height:100%;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.2) transparent}
+ .gfx .gf-card .mc-stage .mc{width:min(74.5%,640px,calc((100svh - var(--gfn,57px) - 150px)*1.64))}
+ .gfx .gcf{width:min(160%,1300px,calc((100svh - var(--gfn,57px) - 150px)*1.64*2.15))}
+}
+/*GF-CSS-END*/
+/*BX-CSS*/
+.bx-st{--s:var(--bxs,clamp(240px,min(58svh,35vw),510px));--bd:calc(var(--s)*.09);position:relative;width:var(--s);height:var(--s);display:block;perspective:calc(var(--s)*3.2);filter:drop-shadow(0 calc(var(--s)*.06) calc(var(--s)*.05) rgba(0,0,0,.26))}
+.bx{position:relative;width:100%;height:100%;transform-style:preserve-3d;will-change:transform;transform:rotateX(0deg) rotateY(0deg)}
+.bx>div{position:absolute}
+.bx-bk{inset:0;background:#7d7d7d;border-radius:.6%}
+.bx-fc{--lid:#aaa;--base:#8c8c8c}
+.bx-sf{left:0;top:calc(100% - var(--bd));width:100%;height:var(--bd);transform-origin:bottom;transform:rotateX(-90deg);background:linear-gradient(180deg,#b2b2b2 0,#a6a6a6 54%,#6f6f6f 55%,#6f6f6f 58%,#8e8e8e 59%,#878787 100%)}
+.bx-sb{left:0;top:0;width:100%;height:var(--bd);transform-origin:top;transform:rotateX(90deg);background:linear-gradient(0deg,#8f8f8f 0,#848484 54%,#5f5f5f 55%,#5f5f5f 58%,#767676 59%,#6f6f6f 100%)}
+.bx-sl{left:0;top:0;width:var(--bd);height:100%;transform-origin:left;transform:rotateY(-90deg);background:linear-gradient(270deg,#a9a9a9 0,#9d9d9d 54%,#686868 55%,#686868 58%,#868686 59%,#808080 100%)}
+.bx-sr{left:calc(100% - var(--bd));top:0;width:var(--bd);height:100%;transform-origin:right;transform:rotateY(90deg);background:linear-gradient(90deg,#838383 0,#797979 54%,#555 55%,#555 58%,#6c6c6c 59%,#666 100%)}
+.bx-top{position:absolute;inset:0;transform:translateZ(var(--bd));container-type:inline-size;overflow:hidden;background:#a9a9a9;border-radius:.6%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.26),inset 0 0 0 1.3cqw rgba(255,255,255,.035)}
+.bx-top>*{position:absolute;display:block}
+.bx-lid{inset:0;background:center/100% 100% no-repeat}.bx-lid-pro{background-image:url(__WEBP:bx-lid-pro__)}.bx-lid-air{background-image:url(__WEBP:bx-lid-air__)}
+.bx-bg{inset:0;background:linear-gradient(131deg,#bfbfbf 0%,#bdbdbd 14%,#969696 100%)}
+.bx-ring{left:20.2cqw;top:23.4cqw;width:62.7cqw;height:54.2cqw;background:url(__WEBP:bx-ring__) center/100% 100% no-repeat}
+.bx-ti{left:4.15cqw;top:4.2cqw;display:flex;flex-direction:column;gap:2.3cqw}
+.bx-pro{width:28.15cqw;aspect-ratio:132.3/31.03;background:url(__SVG:bx-pro__) center/100% 100% no-repeat}
+.bx-air{width:20.5cqw;height:auto;display:block}
+.bx-ti b{font:700 2.45cqw/1 Geist,system-ui,sans-serif;letter-spacing:.13em;color:#000;white-space:nowrap}
+.bx-mk{left:91.7cqw;top:4.25cqw;width:4.04cqw;aspect-ratio:19/14;background:url(__SVG:bx-mark__) center/100% 100% no-repeat}
+.bx-wd{left:38.4cqw;top:90.2cqw;width:23.3cqw;aspect-ratio:109.5/9.84;background:url(__SVG:bx-word__) center/100% 100% no-repeat}
+/* the light follows the pointer across the lid, like it does on the cards */
+.bx-top::before{content:"";position:absolute;inset:1.3cqw;border:1px solid rgba(0,0,0,.09);border-radius:.4cqw;pointer-events:none;z-index:2}
+.bx-top::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:var(--bh,0);mix-blend-mode:soft-light;background:radial-gradient(60% 60% at var(--lx,30%) var(--ly,20%),rgba(255,255,255,.75),rgba(255,255,255,0) 70%)}
+.gvis.mcs{--bxs:clamp(200px,26vw,380px)}.wy-cd{--bxs:clamp(220px,26vw,400px)}
+.gvis.mcs .bx-st,.wy-cd .bx-st{margin:auto}
+.gf-v .bx-st{margin:0}
+@media(max-width:900px){.bx-st{--s:var(--bxs,clamp(180px,56vw,300px))}.gf-v .bx-st{--bxs:clamp(180px,54vw,300px)}}
+/*BX-CSS-END*//*BX-CSS-END*/
+/*GCF-CSS*/
+.gcf{position:relative;width:100%;aspect-ratio:800/420;container-type:inline-size;overflow:visible;background:none;isolation:isolate}
+.gcf>i{position:absolute;display:block;pointer-events:none}.gcf .g1{display:none}
+
+/* the card's own highlights drift with the pointer, so the light moves across the gold like it does on the metal cards */
+.gcf .gc-h1{translate:calc(var(--tx,0)*9cqw) calc(var(--ty,0)*4cqw)}.gcf .gc-h2{translate:calc(var(--tx,0)*16cqw) calc(var(--ty,0)*7cqw)}
+.gf-card,.gvis.mcs,.wy-cd{perspective:1100px}
+.gcf .g1{left:33.35cqw;top:-37.71cqw;width:76.75cqw;aspect-ratio:1}
+.gcf .g1::before,.gcf .gc-h1::before,.gcf .gc-h2::before{content:"";position:absolute;background:center/100% 100% no-repeat}
+.gcf .g1::before{inset:-54.23%;background-image:url(__SVG:gc-glow__)}
+.gcf i{position:absolute;display:block;pointer-events:none}
+.gcf .gc-cd{left:10.625cqw;top:0;width:78.75cqw;height:52.5cqw;filter:drop-shadow(0 1.6cqw 2.2cqw rgba(60,40,10,.3))}
+.gcf .gc-lt{inset:0;isolation:isolate;overflow:hidden;background:url(__WEBP:gc-card__) center/cover no-repeat;-webkit-mask:url(__WEBP:gc-card__) center/cover no-repeat;mask:url(__WEBP:gc-card__) center/cover no-repeat}
+.gcf .gc-h1{left:7.25cqw;top:3cqw;width:68.25cqw;height:25.25cqw;mix-blend-mode:soft-light}.gcf .gc-h1::before{inset:-45% -16.65%;background-image:url(__SVG:gc-lit1__)}
+.gcf .gc-h2{left:23.75cqw;top:6.625cqw;width:42.625cqw;height:13.125cqw;mix-blend-mode:soft-light}.gcf .gc-h2::before{inset:-86.57% -26.66%;background-image:url(__SVG:gc-lit2__)}
+.gcf .gc-mk{left:47.25%;top:40.95%;width:5.5%;height:7.62%;background:url(__SVG:gc-mark__) center/100% 100% no-repeat}
+.gcf .gc-tx{left:calc(50% + .146cqw);top:calc(50% + 4.39cqw);width:12.04cqw;height:3.505cqw;transform:translate(-50%,-50%);background:url(__SVG:gc-text__) center/100% 100% no-repeat}
+.gvis.mcs .gcf{width:min(175%,1000px);flex:none}.wy-cd .gcf{width:min(175%,1000px);flex:none}
+/* in the booking flow the gift card sits on the light panel: card, highlights, mark and name only */
+.gfx .gcf{background:none;border-radius:0;overflow:visible;width:min(160%,1300px);flex:none}.gfx .gcf .g1{display:none}.gfx .gcf .gc-cd{filter:drop-shadow(0 1.6cqw 2.2cqw rgba(60,40,10,.3))}
+@media(max-width:900px){.gfx .gcf{width:min(150%,760px)}}
+/* metal finish on the gold card: soft broad reflection that only moves with the pointer, and a darker falloff toward the lower right */
+.gcf .gc-lt::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(118deg,rgba(255,246,222,0) 18%,rgba(255,244,214,.10) 34%,rgba(255,250,236,.22) 46%,rgba(255,244,214,.08) 58%,rgba(255,246,222,0) 74%),linear-gradient(160deg,rgba(40,24,4,0) 52%,rgba(40,24,4,.2) 100%);background-size:180% 100%,100% 100%;background-repeat:no-repeat;background-position:calc(50% + var(--tx,0)*18%) 0,0 0}
+/*GCF-CSS-END*/
+
+
 
 /*HX-CSS*/
 .mc-gx{--base:linear-gradient(180deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,0) 44%,rgba(0,0,0,.08) 100%),linear-gradient(112deg,rgba(255,255,255,0) 8%,rgba(255,255,255,0.020) 20%,rgba(255,255,255,0.070) 30%,rgba(255,255,255,0.100) 37%,rgba(255,255,255,0.030) 46%,rgba(255,255,255,0) 60%),linear-gradient(112deg,rgba(255,255,255,0) 50%,rgba(255,255,255,0.015) 62%,rgba(255,255,255,0.050) 68%,rgba(255,255,255,0.015) 75%,rgba(255,255,255,0) 86%),linear-gradient(112deg,#1b1b1f 0%,#1f2025 10%,#28292e 20%,#33353a 27%,#3c3d43 31%,#33343a 36%,#28292e 43%,#202125 52%,#1b1c1f 60%,#1a1a1d 66%,#212226 74%,#2a2b2f 82%,#2e2f34 90%,#1c1d20 100%);--edgeL:255,255,255;--sh:rgba(0,0,0,.9);--floor:rgba(0,0,0,.09);--tint:rgba(255,255,255,.28);--hi:rgba(255,255,255,.5);--lo:rgba(0,0,0,.78);--embfill:rgba(255,255,255,.05)}
@@ -1901,6 +2048,31 @@ body .dk~.sec:has(+.uf){padding-bottom:104px!important}
  html body .hxw.gc .lh::before{inset:-20% 18% 45% 18%!important}
  html body .hxw.gc .lh::after{inset:25% 22% -20% 22%!important}
 }
+/* light lifestyle hero: photo full bleed, copy on the empty wall to the left */
+html body .hxw.gc,html body .hxw.gc .lh{background:#efeee9!important}
+html body .hxw.gc .lh::before,html body .hxw.gc .lh::after{display:none!important}
+html body .hxw.gc .lh-st{display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;left:0!important;top:0!important;bottom:auto!important;transform:none!important;aspect-ratio:auto!important;mix-blend-mode:normal!important}
+html body .hxw.gc .lh-bg{background:url(__WEBP:hero-life__) 72% center/cover no-repeat!important;-webkit-mask-image:none!important;mask-image:none!important}
+html body .hxw.gc .gc-top{left:0!important;right:auto!important;width:52cqw!important;align-items:center!important;text-align:center!important;padding:0 clamp(24px,3cqw,56px)!important;top:calc(50% + 28px)!important;transform:translateY(-50%)!important}
+html body .hxw.gc .gc-top .h span{text-align:center!important}
+html body .hxw.gc .gc-top .h .a{background-image:linear-gradient(160deg,#4a4a4a 10%,#7a7a7a 100%)!important}
+html body .hxw.gc .gc-top .h .b{background-image:linear-gradient(160deg,#0d0d0d 20%,#4b4b4b 100%)!important}
+html body .hxw.gc .gc-top .gc-buy{background:#0a0a0a!important;color:#fff!important}
+html body .hxw.gc .gc-top .gc-buy:hover{background:#262626!important}
+@media(min-width:900px){body:has(.hxw.gc) header.nav:not(.scrolled){--hdr-text:#17140f}body:has(.hxw.gc) header.nav:not(.scrolled) .hd-logo .UKj7qa_root{color:#17140f}body:has(.hxw.gc) header.nav:not(.scrolled) .uE8frq_trigger{border-color:rgba(0,0,0,.18)}}
+@media(max-width:899px){
+ html body .hxw.gc .lh-st{top:auto!important;bottom:0!important;height:54%!important}
+ html body .hxw.gc .lh-bg{background-position:70% center!important}
+ html body .hxw.gc .gc-top{left:0!important;right:0!important;width:auto!important;align-items:center!important;text-align:center!important;padding:0 24px!important;top:calc(var(--navh,57px) + 9svh)!important;transform:none!important}
+ html body .hxw.gc .gc-top .h span{text-align:center!important}
+}
+/* progressive blur from the left: three layers, each blurrier and shorter, so the photo dissolves behind the copy */
+html body .hxw.gc .lh-st::before,html body .hxw.gc .lh-st::after,html body .hxw.gc .lh-bg::after{content:"";position:absolute;inset:0;pointer-events:none}
+html body .hxw.gc .lh-bg{position:absolute}
+html body .hxw.gc .lh-bg::after{z-index:1;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);background:linear-gradient(90deg,rgba(242,241,236,.5) 0%,rgba(242,241,236,.28) 40%,rgba(242,241,236,0) 66%);-webkit-mask-image:linear-gradient(90deg,#000 0,#000 36%,transparent 66%);mask-image:linear-gradient(90deg,#000 0,#000 36%,transparent 66%)}
+html body .hxw.gc .lh-st::before{z-index:2;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);-webkit-mask-image:linear-gradient(90deg,#000 0,#000 26%,transparent 52%);mask-image:linear-gradient(90deg,#000 0,#000 26%,transparent 52%)}
+html body .hxw.gc .lh-st::after{z-index:3;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);-webkit-mask-image:linear-gradient(90deg,#000 0,#000 14%,transparent 40%);mask-image:linear-gradient(90deg,#000 0,#000 14%,transparent 40%)}
+@media(max-width:899px){html body .hxw.gc .lh-st::before,html body .hxw.gc .lh-st::after,html body .hxw.gc .lh-bg::after{display:none}}
 /*DK-CSS-END*/
 /*GP-CSS*/
 html body[data-lp] .gs:not(#paths) .gpanel{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0!important;background:#fafafa!important;border-radius:16px!important;padding:16px!important;align-items:stretch!important;overflow:hidden!important}
@@ -1970,7 +2142,7 @@ html body[data-lp] .sec.fx.faq2:not(#paths) .sh2{margin-bottom:clamp(20px,2.2vw,
 html body #faq .acc .fq-row{border:0!important;box-shadow:none!important}
 /*FQ-CSS-END*/
 /*OC-CSS*/
-html body[data-lp] .sec.fx.oc2:not(#paths){--ocn:10;--ocs:13svh;height:calc(100svh - var(--navh,65px) + (var(--ocn) - 1)*var(--ocs))!important;padding:0 var(--gut)!important;display:block!important}
+html body[data-lp] .sec.fx.oc2:not(#paths){--ocn:14;--ocs:13svh;height:calc(100svh - var(--navh,65px) + (var(--ocn) - 1)*var(--ocs))!important;padding:0 var(--gut)!important;display:block!important}
 .oc2-pin{position:sticky;top:var(--navh,65px);height:calc(100svh - var(--navh,65px));display:flex;align-items:center;overflow:hidden}
 .oc2-w{width:100%;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:16px;align-items:center;height:100%}
 .oc2-lw{grid-column:2/7;height:100%;overflow:hidden;-webkit-mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent)}
@@ -2238,7 +2410,7 @@ html body:not(#rc1):not(#rc2) :is(.hw2,.sheet-head) img{visibility:visible!impor
 /*HW-CSS-END*/
 /*CTA-CSS*/
 .cta{position:relative;overflow:hidden;background:#000;color:#fff;display:flex;justify-content:center;min-height:clamp(540px,54.4vw,790px);padding:clamp(60px,8vw,124px) var(--gut) 0}
-.cta::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50.5%);width:min(900px,62vw);aspect-ratio:16/9;background:url(__WEBP:cta-hand__) center bottom/100% 100% no-repeat;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 52%,transparent 96%);mask-image:linear-gradient(180deg,#000 0,#000 52%,transparent 96%);pointer-events:none}
+.cta::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50.5%);width:min(900px,62vw);aspect-ratio:1958/1052;background:url(__WEBP:cta-card__) center bottom/100% 100% no-repeat;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 52%,transparent 96%);mask-image:linear-gradient(180deg,#000 0,#000 52%,transparent 96%);pointer-events:none}
 .cta-in{position:relative;z-index:1;max-width:760px;display:flex;flex-direction:column;align-items:center;text-align:center}
 .cta h2{margin:0;font-weight:400;font-size:clamp(24px,2.5vw,36px);line-height:1.25;letter-spacing:-.03em;color:#fff;max-width:19em}
 .cta p{display:none}
@@ -2558,7 +2730,7 @@ html body .gc-top .gc-buy:hover{background:#1c1c1c;transform:translateY(-1px)}
 .gc-top .h .b{font-size:clamp(52px,7cqw,116px);font-weight:300;line-height:.98;letter-spacing:-.06em;margin:.4cqw 0 0 -.05em!important}
 html body .gc-top .gc-buy{margin-top:clamp(28px,3.2cqw,48px);background:#fff;color:#0a0a0a}
 html body .gc-top .gc-buy:hover{background:#e9e9ea}
-@media(min-width:900px){body:has(.hxw.gc) header.nav:not(.scrolled){--hdr-text:#fff}body:has(.hxw.gc) header.nav:not(.scrolled) .hd-logo .UKj7qa_root{color:#fff}body:has(.hxw.gc) header.nav:not(.scrolled) .uE8frq_trigger{border-color:rgba(255,255,255,.28)}}
+
 @media(max-width:899px){
  .lh-st{width:150%;aspect-ratio:1916/922;left:50%;top:auto;bottom:0;transform:translateX(-51%)}
  .gc-top{left:0;right:0;top:15svh;transform:none;width:auto;align-items:center;text-align:center;padding:0 24px}
@@ -2749,7 +2921,7 @@ const IMG = __IMG__;
    DATA (illustrative numbers)
    ===================================================================== */
 const STORES = {
-  US:{code:'USD',loc:'en-US',flag:'US',name:'United States',rings:{AIR:349,PRO:449},bands:[50,100,150,200,250,300,450],tax:'Tax ID (optional)',taxline:'Sales tax at checkout'},
+  US:{code:'USD',loc:'en-US',flag:'US',name:'United States',rings:{AIR:349,PRO:479},bands:[50,100,150,200,250,300,450],tax:'Tax ID (optional)',taxline:'Sales tax at checkout'},
   AE:{code:'AED',loc:'en-AE',flag:'AE',name:'United Arab Emirates',rings:{AIR:1299,PRO:1699},bands:[200,400,550,750,900,1100,1650],tax:'TRN (optional)',taxline:'VAT included'},
   IN:{code:'INR',loc:'en-IN',flag:'IN',name:'India',rings:{AIR:28499},bands:[5000,10000,15000,20000,25000,30000,45000],tax:'GSTIN (optional)',taxline:'GST included'},
   EU:{code:'EUR',loc:'de-DE',flag:'EU',name:'Europe',rings:{AIR:349,PRO:449},bands:[50,100,150,200,250,300,450],tax:'VAT ID (optional)',taxline:'VAT included'},
@@ -2780,8 +2952,8 @@ const STEPS = {
 /* =====================================================================
    STATE + HELPERS
    ===================================================================== */
-const S = {hauto:true,store:'US',ring:'AIR',gsk:{qty:25},v:{band:null,qty:10},
-  gc:{design:'gold',rName:'',rEmail:'',msg:'',when:'now',date:'',gName:'',gEmail:''},gcStep:1,touched:{},
+const S = {hauto:true,store:'US',ring:'PRO',gsk:{qty:25},v:{band:null,qty:10},
+  gc:{design:'black',rName:'',rEmail:'',rel:'',msg:'',when:'now',date:'',gName:'',gEmail:''},gcStep:1,touched:{},
   co:{company:'',name:'',email:'',addr:'',city:'',zip:''},coTouched:{},
   hiw:'gsk',hstep:0,occ:'corp',cart:null,order:null,issued:{}};
 const st=()=>STORES[S.store], ringKeys=()=>Object.keys(st().rings);
@@ -2832,6 +3004,29 @@ function csRender(){
 function csTo(i){S.cs=i;csRender();csAuto(true)}
 function csGo(d){const n=DESIGNS.length;S.cs=((S.cs||0)+d+n)%n;csRender();csAuto(true)}
 let _cst;function csAuto(reset){clearInterval(_cst);if(RM||!$('#cs'))return;_cst=setInterval(()=>{if(document.hidden)return;const h=$('#cs');if(!h||h.matches(':hover'))return;csGo(1)},3800)}
+/* sizing-kit box, from Figma (Walmart Sizing Kit, 'final top box'): grey lid with the model name, the dithered ring and the wordmark, shown as a box in 3D */
+const BX_AIR='<svg viewBox="0 0 96.4 31.03" fill="black" aria-hidden="true"><path fill-rule="evenodd" d="M0 31.03V8.43C0 3.77 3.77 0 8.43 0H32.49C37.15 0 40.92 3.77 40.92 8.43V31.03H35.52V21.58H5.4V31.03ZM5.4 16.19V5.4H35.52V16.19Z"/><rect x="45.3" y="0" width="5.4" height="31.03"/><path transform="translate(10.2 0)" d="M86.2181 31.0266H80.822V21.584H50.6962V31.0266H45.3V0.00180028H77.7871C82.4527 0.00180028 86.2181 3.76721 86.2181 8.43287V13.1542C86.2181 15.7396 84.8698 17.7629 82.7895 18.8872C84.8684 20.0115 86.2181 22.0347 86.2181 24.6201V31.028V31.0266ZM80.822 16.1878V5.39668H50.6962V16.1878H80.822Z" fill-rule="evenodd"/></svg>';
+function bxArt(key){return `<i class="bx-lid bx-lid-${key==='PRO'?'pro':'air'}"></i>`}
+function bxHTML(key){key=key||S.ring;return `<div class="bx-st"><div class="bx"><div class="bx-bk"></div><div class="bx-fc bx-sf"></div><div class="bx-fc bx-sb"></div><div class="bx-fc bx-sl"></div><div class="bx-fc bx-sr"></div><div class="bx-top">${bxArt(key)}</div></div></div>`}
+/* sizing-kit box and gift card: tilt toward the pointer and the light follows it, the same feel as the voucher card */
+(function(){
+ const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ function init(b){
+  if(b._in)return;b._in=1;const st=b.closest('.gf-v,.gvis,.wy-cd')||b.parentElement,top=b.querySelector('.bx-top')||b;
+  let tx=0,ty=0,gx=0,gy=0,raf=0,hov=false;
+  function tick(){const k=hov?.12:.05;tx+=(gx-tx)*k;ty+=(gy-ty)*k;const h=Math.min(1,Math.hypot(tx,ty)*1.1);
+   b.style.transform='rotateX('+(-ty*12).toFixed(2)+'deg) rotateY('+(tx*14).toFixed(2)+'deg)';
+   top.style.setProperty('--tx',tx.toFixed(3));top.style.setProperty('--ty',ty.toFixed(3));top.style.setProperty('--lx',(50+tx*45).toFixed(1)+'%');top.style.setProperty('--ly',(50+ty*45).toFixed(1)+'%');top.style.setProperty('--bh',(h*.9).toFixed(3));
+   if(hov||Math.abs(tx)+Math.abs(ty)>.002)raf=requestAnimationFrame(tick);else{raf=0;b.style.transform='rotateX(0deg) rotateY(0deg)'}}
+  if(rm)return;
+  st.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();gx=Math.max(-1,Math.min(1,((e.clientX-r.left)/r.width-.5)*2));gy=Math.max(-1,Math.min(1,((e.clientY-r.top)/r.height-.5)*2));hov=true;if(!raf)raf=requestAnimationFrame(tick)});
+  st.addEventListener('pointerleave',()=>{hov=false;gx=0;gy=0;if(!raf)raf=requestAnimationFrame(tick)});
+ }
+ const scan=()=>document.querySelectorAll('.bx:not([data-ok]),.gcf:not([data-ok])').forEach(b=>{b.dataset.ok=1;init(b)});
+ scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.body,{childList:true,subtree:true});
+})();
+/* gift card artwork from Figma (Gifting Flow 66:27165): gold card on a warm glow, mark and name engraved at the centre */
+function gcFig(){return `<div class="gcf" role="img" aria-label="Ultrahuman Ring Gift Card"><i class="g1"></i><i class="gc-cd"><i class="gc-lt"><i class="gc-h1"></i><i class="gc-h2"></i></i></i><i class="gc-mk"></i><i class="gc-tx"></i></div>`}
 function mcHTML(c,m,t,s){return `<div class="mc-stage"><div class="mc mc-${c}" data-t="bl" data-i="tr" data-metal="${m}"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">${t}</span><span class="mc-t2">${s}</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i></div></div>`}
 function gsec({tag,pri,title,desc,facts,price,cta,href,how,vis,pastel,rev,mc,id,soon}){
   return `<section class="gs"${id?` id="${id}"`:''}><div class="gpanel ${rev?'rev':''}"><div class="gtxt"><span class="gtag ${pri?'pri':''}">${tag}</span><h3>${title}</h3><p>${desc}</p><ul class="gf">${facts.map(f=>`<li>${f}</li>`).join('')}</ul>${soon?'<div class="gsoon"><span>Coming soon</span></div>':`<div class="gprice">${price}</div><div class="gcta"><a class="btn btn-primary btn-lg mag" href="${href}">${cta}</a><button class="btn btn-ghost btn-lg" onclick="openHow('${how}')">How it works</button></div>`}</div><div class="gvis ${pastel?'pastel':''}${mc?' mcs':''}"${mc?'':' data-tilt'}>${vis}</div></div></section>`;
@@ -2898,7 +3093,7 @@ const APPN=[['Nudges','Real-time, actionable nudges on what to do next.',IC('<pa
 const APPX=[['Skin temperature','Monitored 24/7 by a non-contact, medical-grade sensor.',IC('<path d="M14 14.8V5a2 2 0 10-4 0v9.8a4 4 0 104 0z"/>')],['Caffeine Window','Recommends caffeine timings and cut-offs to protect your sleep.',IC('<path d="M5 8h11v6a5 5 0 01-5 5H10a5 5 0 01-5-5V8zM16 10h2a2 2 0 010 4h-2"/>')],['Cycle & Ovulation','Temperature-based ovulation prediction.',IC('<circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 010 16"/>')],['Coaching','ACSM-certified performance coaches, at no extra cost.',IC('<path d="M12 3l2.6 5.6 6 .7-4.4 4.1 1.2 6L12 16.5 6.6 19.4l1.2-6L3.4 9.3l6-.7L12 3z"/>')]];
 const PERS=[['The team','One ring each for a team, a launch or a year well done. Pay once, they size and choose.','corporate','Sizing kits','Gift your team'],['The beginner','For the person who never checks their own health. The ring does the tracking.','gift-card','Gift card','Send a gift card'],['The athlete','For the person who trains hard and wants recovery to match the effort.','gift-card','Gift card','Send a gift card'],['Clients and partners','A thank-you they choose for themselves, with no sizing on your side.','vouchers','Vouchers','Send vouchers'],['The night owl','For the person who sleeps late and wakes up tired. The first score shows them why.','gift-card','Gift card','Send a gift card'],['Events and conferences','One code per attendee. No sizing, no shipping, nothing to carry home.','vouchers','Vouchers','Send vouchers']];
 const BN=[['Sleep','Know how you slept','Stages, timing and a nightly score, from the very first night. No setup, no second device.','wide'],['Recovery','Ready, or not','A daily read on how prepared the body is for the day ahead.','tall'],['Movement','Every step counts','Activity and training load, all day.','m'],['Heart rate','Your pulse, always','Resting rate and variability, around the clock.','h'],['Temperature','Early signals','Skin temperature trends before you feel them.','t'],['Insights','What changed, and why','Plain-language guidance on what to do next.','i']];
-const OCZ_BASE=[['Birthdays','Another year, marked well','birthdays'],['Anniversaries','For the years they have shared','anniversaries'],['Weddings','A first gift for a new chapter','weddings'],['New parents','Rest and recovery, tracked','new-parents'],['Graduations','A start worth celebrating','graduations'],['Promotions','For the one who earned it','promotions'],['Retirements','Time to look after themselves','retirements'],['Thank you','Something that says it daily','thank-you'],['Get well soon','Watch recovery come back','get-well'],['Holidays','The gift that outlasts the season','christmas']];
+const OCZ_BASE=[['Retreats and offsites','Bring the team back rested','retreats'],['Welcome kits','A first-day gift that keeps going','welcome-kits'],['Wellness programs','Give the programme something to track','wellness-programs'],['Milestones and rewards','Mark the moment, then keep it going','milestones'],['Birthdays','Another year, marked well','birthdays'],['Anniversaries','For the years they have shared','anniversaries'],['Weddings','A first gift for a new chapter','weddings'],['New parents','Rest and recovery, tracked','new-parents'],['Graduations','A start worth celebrating','graduations'],['Promotions','For the one who earned it','promotions'],['Retirements','Time to look after themselves','retirements'],['Thank you','Something that says it daily','thank-you'],['Get well soon','Watch recovery come back','get-well'],['Holidays','The gift that outlasts the season','christmas']];
 /* the last occasion is regional: it follows the store (see regional-occasions.html) */
 const REGION_OCC={IN:['Diwali','Lights, rest and a good year ahead','diwali'],US:['Christmas','The gift that outlasts the season','christmas'],GB:['Christmas','The gift that outlasts the season','christmas'],EU:['Christmas','The gift that outlasts the season','christmas'],AE:['Eid','A gift for a celebration shared','eid']};
 const OCZ_LAST=OCZ_BASE.length-1,occ=()=>OCZ_BASE.map((o,i)=>i===OCZ_LAST?(REGION_OCC[S.store]||o):o);
@@ -2948,9 +3143,9 @@ function viewLanding(){
 
   <div class="gwrap"><section class="sec" id="paths">${sh('Three ways to give','One ring at the end of each. Pick the one that fits.','lft')}</section>
   <nav class="gtabs" id="gtabs" aria-label="Three ways to give"><div class="gt-p"><span class="gt-i"></span><button class="on" data-t="g-kit"><b>01</b>Gift sizing kits</button><button data-t="g-voucher"><b>02</b>Ring vouchers</button><button data-t="g-card"><b>03</b>Gift card</button></div></nav>
-  ${gsec({tag:'For teams · Most chosen',pri:true,title:'Gift sizing kits',desc:'Buy in bulk at a volume discount. Everyone sizes themselves at home, then picks their ring.',facts:['Up to 25% off with volume','Kits ship to you in 24 hours','Codes valid for 6 months'],price:`From <b class="num">${fmt(unit(100))}</b> per kit`,cta:'Build an order',href:'#corporate',how:'gsk',mc:1,id:'g-kit',vis:mcHTML('bm','matte','Gift sizing kit','One ring per code')})}
-  ${gsec({soon:true,tag:'For teams',title:'Ring vouchers',desc:'Pick a value, get the codes, pass them on. No sizing and no shipping. They spend it on anything.',facts:['Seven values, up to 50 codes','Share by message or download as CSV','Balance stays on the code'],rev:true,mc:1,id:'g-voucher',vis:mcHTML('bb','brushed','Ring voucher','Value $250 · 12 months')})}
-  ${gsec({soon:true,tag:'For one person',title:'Gift card',desc:'Pay for the ring. They get an email with a code, then choose their own size and finish.',facts:['Full ring price, nothing extra','Sent now or on a date you pick','Pick a card design for the email'],mc:1,id:'g-card',vis:mcHTML('bg','gloss','Gift card','For Jane Doe · Ring AIR')})}
+  ${gsec({tag:'For teams · Most chosen',pri:true,title:'Gift sizing kits',desc:'Buy in bulk at a volume discount. Everyone sizes themselves at home, then picks their ring.',facts:['Up to 25% off with volume','Kits ship to you in 24 hours','Codes valid for 6 months'],price:`From <b class="num">${fmt(unit(100))}</b> per kit`,cta:'Build an order',href:'#corporate',how:'gsk',mc:1,id:'g-kit',vis:bxHTML()})}
+  ${gsec({soon:true,tag:'For teams',title:'Ring vouchers',desc:'Pick a value, get the codes, pass them on. No sizing and no shipping. They spend it on anything.',facts:['Seven values, up to 50 codes','Share by message or download as CSV','Balance stays on the code'],rev:true,mc:1,id:'g-voucher',vis:mcHTML('sv','silver','Ring voucher','Value $250 · 12 months')})}
+  ${gsec({soon:true,tag:'For one person',title:'Gift card',desc:'Pay for the ring. They get an email with a code, then choose their own size and finish.',facts:['Full ring price, nothing extra','Sent now or on a date you pick','Add a personal note to the email'],mc:1,id:'g-card',vis:gcFig()})}
 </div>
 
   <section class="sec fx dk">${sh('A gift that keeps giving back','Every morning, not just the day it is opened.','lft')}
@@ -3039,7 +3234,7 @@ function openHow(k){
     {t:'Their ring, their story',d:`Once redeemed, their Ultrahuman ${rn} is made just for them: perfectly sized, engraved, and ready to take their health journey to the next level.`,img:'gengr',chips:['Made for them']}]}:STEPS[k];
   const tc=k==='gc'?[`The Gift Card is sold at the price shown at purchase.`,`The Gift Card is applicable to the Ultrahuman ${rn} only.`,`The Gift Card includes free engraving, optional during redemption by the recipient.`,`The Gift Card is valid for 1 year from the date of purchase and is for one-time use only.`,`The Gift Card is redeemable only on the store it was issued on, via the <a href="#redeem" onclick="closeSheet()">dedicated redemption page</a>.`]:TC[k];
   const meta={gc:{img:'gcard',n:'Gift Card · '+rn,p:fmt(rp()),cta:'Gift '+rn,to:'#gift-card'},gsk:{img:'kit1',n:'Gift Sizing Kit',p:'From '+fmt(unit(100)),cta:'Buy kits',to:'#corporate'},voucher:{img:'gcard',n:'Ring Voucher',p:'From '+fmt(st().bands[0]),cta:'Choose a value',to:'#vouchers'}}[k];
-  const card=k==='gc'?mcHTML('bg','gloss','Gift card','For Jane Doe · '+rn):k==='voucher'?mcHTML('bb','brushed','Ring voucher','Value $250 · 12 months'):mcHTML('bm','matte','Gift sizing kit','One ring per code');
+  const card=k==='gc'?gcFig():k==='voucher'?mcHTML('sv','silver','Ring voucher','Value $250 · 12 months'):bxHTML();
   sheetOpen(`<button class="sheet-x" onclick="closeSheet()" aria-label="Close">&times;</button>
   <div class="sheet-head"><div class="pthumb"><img src="${IMG[meta.img]}" alt=""><div><b>${meta.n}</b><span class="num">${meta.p}</span></div></div><div class="rt"><a class="btn btn-primary" onclick="closeSheet()" href="${meta.to}">${meta.cta}</a></div></div>
   <div class="hw2"><header class="hw2-top"><span class="hw-k">${HWK[k]}</span><h2>${H.title}</h2><p>${H.sub}</p>${k==='gsk'?`<span class="hw-badge">Ships in 24 hours</span>`:''}</header>
@@ -3132,24 +3327,6 @@ function bpPage({gal,title,price,payRow,dispatch,pill,secs,sum,note,bar}){
 function bpBelow({box,hiw=''}){
   /* detail pages end with "How it works": the hero banner, stats, details, talk-to-us and FAQ sections are removed */
   return hiw;
-}
-function viewWays(){
-  const AR='<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg>';
-  const T=[
-   {href:'#corporate',tag:'For teams · Most chosen',h:'Gift sizing kits',lead:'Buy in bulk at a volume discount. Everyone sizes themselves at home, then picks their ring.',
-    st:[['Buy in bulk','Up to 25% off with volume.'],['Everyone sizes at home','Kits ship to you in 24 hours.'],['They pick their ring','Each code is valid for 6 months.']],cta:'Build an order',pr:`From <span class="num">${fmt(unit(100))}</span> per kit`,card:mcHTML('bm','matte','Gift sizing kit','One ring per code')},
-   {href:'#vouchers',tag:'For teams',h:'Ring vouchers',lead:'Pick a value, get the codes, pass them on. No sizing and no shipping.',
-    st:[['Pick a value','Seven values, up to 50 codes.'],['Share the codes','By message, or download as CSV.'],['They spend it on anything','The balance stays on the code.']],cta:'Explore vouchers',pr:'Up to 50 codes',card:mcHTML('bb','brushed','Ring voucher','Value $250 · 12 months')},
-   {href:'#gift-card',tag:'For one person',h:'Gift card',lead:'Pay for the ring. They choose their own size and finish.',
-    st:[['You pay for the ring','Full ring price, nothing extra.'],['They get an email','Sent now, or on a date you pick.'],['They choose size and finish','Pick a card design for the email.']],cta:'Send a gift card',pr:'Full ring price',card:mcHTML('bg','gloss','Gift card','For Jane Doe · Ring AIR')}];
-  return `${crumb('Three ways to give')}
-  <main class="wy">
-   <header class="wy-h"><h1>Three ways to give</h1><p>One ring at the end of each. Pick the one that fits.</p></header>
-   <div class="wy-g">${T.map(t=>`<section class="wy-t"><div class="wy-tx"><div><span class="wy-tag">${t.tag}</span><h3>${t.h}</h3><p class="wy-lead">${t.lead}</p></div>
-     <div class="wy-how"><span class="wy-tag">How it works</span><div class="wy-s">${t.st.map((x,i)=>`<div><i>0${i+1}</i><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div></div>
-     <div class="wy-ft"><a class="wy-btn" href="${t.href}">${t.cta} ${AR}</a><span class="wy-pr">${t.pr}</span></div></div><div class="wy-cd">${t.card}</div></section>`).join('')}</div>
-  </main>
-  ${footer()}`;
 }
 function viewCorporate(){
   const q=S.gsk.qty,u0=unit(q);
@@ -3524,7 +3701,100 @@ document.addEventListener('click',e=>{
 /* =====================================================================
    ROUTER / CHROME
    ===================================================================== */
-const ROUTES={'':viewLanding,gifting:viewLanding,ways:viewWays,shop:viewShop,corporate:viewCorporate,vouchers:viewVouchers,'gift-card':viewGift,checkout:viewCheckout,success:viewSuccess,redeem:viewRedeem};
+/*GF-JS*/
+/* gifting builder: one split-screen flow for kits, vouchers and the gift card.
+   Left: the product card. Right: four steps that open one at a time, finished steps fold up with a tick and an Edit link. */
+const GF={
+ kit:{name:'Gift sizing kit',steps:['Choose a ring','How many kits?','Where should the kits go?','Review and pay']},
+ voucher:{name:'Ring voucher',steps:['Choose a value','How many codes?','Your details','Review and pay']},
+ card:{name:'Gift card',steps:['Choose a ring','Who’s receiving it','Add a personal note','Review and pay']}
+};
+const RDESC={PRO:'Unibody titanium, 15-day battery, built for people who track everything.',AIR:'The lightest ring. 4 to 6 days of battery, made for sleep.'};
+const GF_CHK='<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12.207 5L5.877 11.33 3 8.453"/></svg>';
+const GF_BACK='<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#6B6B6B" stroke-width="1.667" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 15L7.5 10l5-5"/></svg>';
+const GF_REL=['Parent','Partner','Myself','Team','Someone else'];
+const gfK=()=>S.gf.kind;
+const gfCoOk=ks=>ks.every(k=>!CO_ERR[k](S.co[k]));
+function gfTotal(){const k=gfK();return k==='kit'?unit(S.gsk.qty)*S.gsk.qty:k==='voucher'?S.v.band*S.v.qty:rp()}
+function gfCart(){const k=gfK();
+ if(k==='kit'){const q=S.gsk.qty;return{type:'corporate',ring:S.ring,qty:q,unit:unit(q),list:rp()*q,total:unit(q)*q,pct:band(q).pct,store:S.store}}
+ if(k==='voucher')return{type:'voucher',ring:S.ring,band:S.v.band,qty:S.v.qty,total:S.v.band*S.v.qty,store:S.store};
+ return{type:'giftcard',ring:S.ring,total:rp(),store:S.store,...S.gc,design:'black'}}
+function gfOk(n){const k=gfK(),g=S.gc;
+ if(n===1)return k==='voucher'?!!S.v.band:true;
+ if(n===2)return k==='kit'?S.gsk.qty>=1:k==='voucher'?(S.v.qty>=1&&S.v.qty<=50):(g.rName.trim()&&emailOk(g.rEmail)&&!!g.rel);
+ if(n===3)return k==='kit'?gfCoOk(['company','name','email','addr','city','zip']):k==='voucher'?gfCoOk(['name','email']):(g.when==='now'||(g.date&&g.date>=todayISO()));
+ return k==='card'?(g.gName.trim()&&emailOk(g.gEmail)):true}
+function gfSum(n){const k=gfK(),g=S.gc;
+ if(n===1)return k==='voucher'?`${fmt(S.v.band)} per code`:`${RINGS[S.ring].name} · ${fmt(rp())}${k==='kit'?' per kit':''}`;
+ if(n===2){if(k==='kit'){const q=S.gsk.qty;return `${q} kit${q>1?'s':''} · ${fmt(gfTotal())}`}
+  if(k==='voucher')return `${S.v.qty} code${S.v.qty>1?'s':''} · ${fmt(gfTotal())}`;return `${esc(g.rName)} · ${esc(g.rel||'')}`}
+ if(n===3){if(k==='kit')return `${esc(S.co.name)}, ${esc(S.co.company)}`;if(k==='voucher')return esc(S.co.email);return g.when==='now'?'Right away':'On '+fmtD(g.date)}
+ return ''}
+function gfRow({sel,on,title,desc,tag,price,was,sub}){return `<button type="button" class="gf-r ${sel?'sel':''}" role="radio" aria-checked="${!!sel}" onclick="${on}"><span class="gf-rd"></span><span class="gf-rt"><b>${title}${tag?`<i class="gf-tag">${tag}</i>`:''}</b><small>${desc}</small></span>${price?`<span class="gf-rp"><b class="num">${price}</b>${was?`<s class="num">${was}</s>`:sub?`<small>${sub}</small>`:''}</span>`:''}</button>`}
+function gfField(store,id,label,{type='text',ph='',auto=''}={}){const v=(store==='co'?S.co:S.gc)[id];
+ return `<label class="gf-f" id="gff_${id}"><span>${label}</span><input type="${type}" placeholder="${ph}" value="${esc(v)}" ${auto?`autocomplete="${auto}"`:''} oninput="gfIn('${store}','${id}',this.value)" onblur="gfBlur('${store}','${id}')"><em class="gf-er" id="gfe_${id}"></em></label>`}
+function gfCont(n,label){return `<button type="button" class="gf-c" id="gfc${n}" onclick="gfNext(${n})" ${gfOk(n)?'':'disabled'}>${label||'Continue'}</button>`}
+function gfRingRows(){return `<div class="gf-rs" role="radiogroup">${ringKeys().map(k=>gfRow({sel:S.ring===k,on:`gfRing('${k}')`,title:RINGS[k].name,desc:RDESC[k]||'',price:fmt(st().rings[k]),sub:gfK()==='kit'?'per kit':''})).join('')}</div>`}
+function gfQtyBody(){const k=gfK(),presets=k==='kit'?[5,10,25,50,100]:[1,5,10,25,50],q=k==='kit'?S.gsk.qty:S.v.qty;
+ const rows=presets.map(n=>{if(k==='kit'){const p=band(n).pct;return gfRow({sel:q===n,on:`gfQ(${n})`,title:`${n} kits`,desc:p?`${p}% off · ${fmt(unit(n))} per kit`:`${fmt(rp())} per kit`,tag:n===25?'Most chosen':'',price:fmt(unit(n)*n),was:p?fmt(rp()*n):'',sub:''})}
+  return gfRow({sel:q===n,on:`gfQ(${n})`,title:`${n} code${n>1?'s':''}`,desc:`${fmt(S.v.band)} each, one per person`,price:fmt(S.v.band*n)})}).join('');
+ return `<div class="gf-rs" role="radiogroup">${rows}</div><div class="gf-q"><span>Other quantity</span><div><button type="button" onclick="gfQd(-1)" aria-label="Fewer">&minus;</button><input id="gfq" type="number" inputmode="numeric" min="1" max="${k==='kit'?1000:50}" value="${q}" oninput="gfQi(this.value)" aria-label="Quantity"><button type="button" onclick="gfQd(1)" aria-label="More">+</button></div></div>${k==='kit'?`<p class="gf-note" id="gfnote">${gskNote()}</p>`:''}`}
+function gfBodyHTML(n){const k=gfK(),g=S.gc;let h='';
+ if(n===1){h=k==='voucher'?`<div class="gf-rs" role="radiogroup">${st().bands.map(b=>gfRow({sel:S.v.band===b,on:`gfBand(${b})`,title:`${fmt(b)} voucher`,desc:b>=rp()?`Covers a full ${RINGS[S.ring].name}`:'Spend it on any ring or accessory',tag:b>=rp()?'Covers a ring':'',price:fmt(b)})).join('')}</div>`:gfRingRows();return h+gfCont(1)}
+ if(n===2){if(k==='card')return `<div class="gf-fm"><div class="gf-grp">${gfField('gc','rName','Receiver’s name',{auto:'off'})}${gfField('gc','rEmail','Email address',{type:'email',auto:'off'})}</div><label class="gf-f gf-sel gf-box"><span>Who is this for?</span><select onchange="gfIn('gc','rel',this.value)"><option value="" ${g.rel?'':'selected'} disabled>Select one</option>${GF_REL.map(r=>`<option ${g.rel===r?'selected':''}>${r}</option>`).join('')}</select></label></div>${gfCont(2)}`;
+  return gfQtyBody()+gfCont(2)}
+ if(n===3){
+  if(k==='card')return `<div class="gf-fm"><label class="gf-ta"><textarea maxlength="300" rows="4" placeholder="Happy birthday. Sleep well." oninput="gfIn('gc','msg',this.value)">${esc(g.msg)}</textarea><em class="gf-ct" id="gfct">${g.msg.length} / 300</em></label>
+   <div class="gf-lb">When should it arrive?</div><div class="gf-rs" role="radiogroup">${gfRow({sel:g.when==='now',on:"gfWhen('now')",title:'Right away',desc:'Sent as soon as you pay',price:''})}${gfRow({sel:g.when==='date',on:"gfWhen('date')",title:'On a date',desc:'We hold the email until the day you pick',price:''})}</div>
+   <label class="gf-f gf-box" id="gff_date" ${g.when==='date'?'':'hidden'}><span>Send date</span><input type="date" min="${todayISO()}" value="${g.date}" oninput="gfIn('gc','date',this.value)"><em class="gf-er" id="gfe_date"></em></label></div>${gfCont(3)}`;
+  if(k==='voucher')return `<div class="gf-fm"><div class="gf-grp">${gfField('co','name','Full name',{auto:'name'})}${gfField('co','email','Email address',{type:'email',auto:'email'})}</div></div>${gfCont(3)}`;
+  return `<div class="gf-fm"><div class="gf-grp">${gfField('co','company','Company name',{auto:'organization'})}<div class="gf-r2">${gfField('co','name','Full name',{auto:'name'})}${gfField('co','email','Work email',{type:'email',auto:'email'})}</div>${gfField('co','addr','Address',{auto:'street-address'})}<div class="gf-r2">${gfField('co','city','City',{auto:'address-level2'})}${gfField('co','zip','Postcode',{auto:'postal-code'})}</div></div></div>${gfCont(3)}`}
+ const c=gfCart();
+ return `${k==='card'?`<div class="gf-fm"><div class="gf-grp">${gfField('gc','gName','Your name',{auto:'name'})}${gfField('gc','gEmail','Your email',{type:'email',auto:'email'})}</div></div>`:''}
+  <div class="gf-sum">${coSummary(c)}</div>
+  <p class="gf-note">The invoice comes to you. ${k==='card'?'Your giftee only receives the gift email.':'Codes are created when you pay and only redeem on the '+st().name+' store.'} Prototype only. Payment is simulated and nothing is charged.</p>
+  <div class="gf-fm"><div class="gf-grp"><label class="gf-f"><span>Card number</span><input placeholder="4242 4242 4242 4242" inputmode="numeric"></label><div class="gf-r2"><label class="gf-f"><span>Expiry</span><input placeholder="MM / YY"></label><label class="gf-f"><span>CVC</span><input placeholder="123"></label></div></div></div>
+  <button type="button" class="gf-c wide" id="gfc4" onclick="gfPay()" ${gfOk(4)?'':'disabled'}>Confirm and pay ${fmt(gfTotal())}</button>`}
+const GF_HELP={kit:{3:'Kits ship within 24 hours. Every code lands in your inbox.'},voucher:{3:'Your codes appear on the next screen and are emailed to you.'},card:{2:'Only your giftee’s details go on the gift. Your details are taken at checkout, so the invoice comes to you.',3:'Optional. It goes on the surprise email they receive with the card.'}};
+function gfHeadHTML(n){const d=S.gf.done[n]&&S.gf.step!==n,o=S.gf.step===n,h=o&&(GF_HELP[gfK()]||{})[n];return `<span class="gf-n ${d?'ok':''}">${d?GF_CHK:n}</span><div class="gf-t"><b>${GF[gfK()].steps[n-1]}</b>${d?`<small>${gfSum(n)}</small>`:h?`<small>${h}</small>`:''}</div>${d?`<button type="button" class="gf-e" onclick="gfEdit(${n})">Edit</button>`:''}`}
+function gfCardHTML(){const k=gfK();return k==='kit'?bxHTML(S.ring):k==='voucher'?mcHTML('sv','silver','Ring voucher',gfT2()):gcFig()}
+function gfT2(){const k=gfK();return k==='kit'?`${S.gsk.qty} × ${RINGS[S.ring].name}`:k==='voucher'?`Value ${fmt(S.v.band)} · 12 months`:`For ${S.gc.rName.trim()||'Jane Doe'} · ${RINGS[S.ring].name}`}
+function gfVisual(){document.querySelectorAll('#gfcard .mc-t2').forEach(e=>e.textContent=gfT2());if(gfK()==='kit'){const b=$('#gfcard .bx');if(b){const t=b.querySelector('.bx-top');if(t.dataset.k!==S.ring){t.dataset.k=S.ring;t.innerHTML=bxArt(S.ring)}}}}
+function gfRefresh(opts={}){for(let n=1;n<=4;n++){const s=$('#gfs'+n);if(!s)continue;const open=S.gf.step===n;s.classList.toggle('open',open);s.classList.toggle('done',!!S.gf.done[n]&&!open);$('#gfh'+n).innerHTML=gfHeadHTML(n);if(open||opts.all)$('#gfb'+n).innerHTML=gfBodyHTML(n)}}
+function gfBody(n){const b=$('#gfb'+n);if(b)b.innerHTML=gfBodyHTML(n)}
+function gfBtn(){const n=S.gf.step,b=$('#gfc'+n);if(b)b.disabled=!gfOk(n)}
+function gfNext(n){if(!gfOk(n))return;S.gf.done[n]=true;S.gf.step=Math.min(4,n+1);gfRefresh();const s=$('#gfs'+S.gf.step);if(s)setTimeout(()=>s.scrollIntoView({behavior:'smooth',block:'start'}),60)}
+function gfEdit(n){S.gf.step=n;gfRefresh();const s=$('#gfs'+n);if(s)setTimeout(()=>s.scrollIntoView({behavior:'smooth',block:'start'}),60)}
+function gfRing(k){S.ring=k;gfBody(1);gfVisual();gfHeads()}
+function gfHeads(){for(let n=1;n<=4;n++){const h=$('#gfh'+n);if(h)h.innerHTML=gfHeadHTML(n)}}
+function gfBand(b){S.v.band=b;gfBody(1);gfVisual();gfHeads()}
+function gfQ(n){if(gfK()==='kit')S.gsk.qty=n;else S.v.qty=n;gfBody(2);gfVisual();gfHeads()}
+function gfQd(d){const k=gfK(),q=(k==='kit'?S.gsk.qty:S.v.qty)+d;gfQ(Math.max(1,Math.min(k==='kit'?1000:50,q)))}
+function gfQi(v){let n=parseInt(v,10);if(isNaN(n)||n<1)return;const k=gfK();n=Math.min(n,k==='kit'?1000:50);if(k==='kit')S.gsk.qty=n;else S.v.qty=n;
+ document.querySelectorAll('#gfb2 .gf-r').forEach(r=>r.classList.remove('sel'));const nt=$('#gfnote');if(nt)nt.innerHTML=gskNote();gfVisual();gfBtn()}
+function gfWhen(w){S.gc.when=w;gfBody(3)}
+const GF_ERR=()=>({...CO_ERR,...GERR});
+function gfIn(store,id,v){(store==='co'?S.co:S.gc)[id]=v;const f=$('#gff_'+id);if(f&&f.classList.contains('bad')){const m=GF_ERR()[id]?GF_ERR()[id](v):'';f.classList.toggle('bad',!!m);const e=$('#gfe_'+id);if(e)e.textContent=m}
+ if(id==='msg'){const c=$('#gfct');if(c)c.textContent=v.length+' / 300'}if(id==='rName')gfVisual();gfBtn()}
+function gfBlur(store,id){const fn=GF_ERR()[id];if(!fn)return;const m=fn((store==='co'?S.co:S.gc)[id]);const f=$('#gff_'+id);if(f)f.classList.toggle('bad',!!m);const e=$('#gfe_'+id);if(e)e.textContent=m}
+function gfPay(){if(!gfOk(4)){['gName','gEmail'].forEach(i=>gfBlur('gc',i));return}
+ S.cart=gfCart();if(S.cart.type==='giftcard'){S.order=makeOrder(S.cart);location.hash='success';return}pay()}
+function viewGf(kind){
+ if(!S.gf||S.gf.kind!==kind){S.gf={kind,step:1,done:{}}}
+ if(kind==='card'&&!S.gc.rel)S.gc.rel='';
+ const perks={kit:['Free shipping','Valid 6 months','One ring per code'],voucher:['Delivered instantly','Valid 12 months','Balance stays on the code'],card:['Sent by email','Valid 12 months','They choose size and finish']}[kind];
+ return `<main class="gfx" data-k="${kind}" style="--gfn:${(document.querySelector('header.nav')||{offsetHeight:57}).offsetHeight}px">
+  <aside class="gf-v"><a class="gf-back" href="#gifting">${GF_BACK}<span>Explore Gifting</span></a><div class="gf-card" id="gfcard">${gfCardHTML()}</div><ul class="gf-perks">${perks.map(p=>`<li>${p}</li>`).join('')}</ul></aside>
+  <section class="gf-p"><h1>Customize your gift</h1><p class="gf-sub">${GF[kind].name}</p>
+   <div id="gfp">${[1,2,3,4].map(n=>`<section class="gf-s ${S.gf.step===n?'open':''} ${S.gf.done[n]&&S.gf.step!==n?'done':''}" id="gfs${n}"><div class="gf-h" id="gfh${n}">${gfHeadHTML(n)}</div><div class="gf-b"><div class="gf-bi" id="gfb${n}">${S.gf.step===n?gfBodyHTML(n):''}</div></div></section>`).join('')}</div></section>
+ </main>`}
+/*GF-JS-END*/
+
+/* the card fades in on entry; if the observer has not fired by then (small or background viewports), start it directly */
+new MutationObserver(()=>{if(!document.querySelector('.gf'))return;setTimeout(()=>{document.querySelectorAll('.gf .mc[data-metal]:not(.arr)').forEach(c=>{if(c.__intro)c.__intro()})},1400)}).observe(document.getElementById('app'),{childList:true});
+addEventListener('hashchange',()=>{S.gf=null});
+const ROUTES={'':viewLanding,gifting:viewLanding,shop:viewShop,corporate:()=>viewGf('kit'),vouchers:()=>viewGf('voucher'),'gift-card':()=>viewGf('card'),checkout:viewCheckout,success:viewSuccess,redeem:viewRedeem};
 const route=()=>location.hash.replace(/^#\/?/,'');
 const SC={},scKey=r=>(r===''||r==='gifting')?'lp':r;
 const BAR={corporate:()=>({s:`${S.gsk.qty} kits${band(S.gsk.qty).pct?' · '+band(S.gsk.qty).pct+'% off':''}`,t:fmt(unit(S.gsk.qty)*S.gsk.qty),b:'Buy now',f:'buyGsk()'}),
@@ -3538,6 +3808,7 @@ const SUB={corporate:()=>({img:'kit1',n:'Gift Sizing Kits',p:`From ${fmt(unit(10
   'gift-card':()=>({img:'gcard',n:'Gift Card · '+RINGS[S.ring].name,p:fmt(rp()),s:'',cta:'Gift '+RINGS[S.ring].name,f:'openGift()'})};
 function paintSub(){const el=$('#subnav'),c=SUB[route()];if(!c){el.innerHTML='';el.classList.remove('show');return}
   const x=c();el.innerHTML=`<div class="subnav-in"><div class="pthumb"><img src="${IMG[x.img]}" alt=""><div><b>${x.n}</b><span class="num">${x.p}</span></div></div><button class="btn btn-primary" onclick="${x.f}">${x.cta}</button></div>`;onScroll()}
+['corporate','vouchers','gift-card'].forEach(k=>{delete BAR[k];delete SUB[k]});
 function onScroll(){$('#nav').classList.toggle('scrolled',scrollY>8);{const L=document.querySelector('[data-header-logo]');if(L)L.dataset.scrolled=scrollY>8?'true':'false'}const mx=document.documentElement.scrollHeight-innerHeight;$('#prog').style.transform='scaleX('+(mx>0?Math.min(1,scrollY/mx):0)+')';const hh=document.querySelector('.hero,.hmin');if(hh&&!RM){hh.style.setProperty('--sy',Math.min(scrollY,900)*.14);hh.style.setProperty('--sc',Math.min(scrollY,900))}const h=document.querySelector('.hero,.hmin');const el=$('#subnav');if(!SUB[route()]||!h){el.classList.remove('show');return}el.classList.toggle('show',scrollY>h.offsetTop+h.offsetHeight-60)}
 addEventListener('scroll',onScroll,{passive:true});
 function render(keep){
