@@ -1888,6 +1888,104 @@ body[data-lp] .gs:not(#paths) .gpanel .gvis.mcs{aspect-ratio:auto!important;min-
 .gf-q{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:-16px 0 32px;padding:14px 20px;border:1px dashed rgba(0,0,0,.25);border-radius:12px;font:400 15px/1 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-ink)}
 .gf-q>div{display:flex;align-items:center;gap:8px}.gf-q button{all:unset;cursor:pointer;width:32px;height:32px;box-sizing:border-box;border-radius:50%;border:1px solid var(--gf-ln);display:grid;place-items:center;font-size:18px}.gf-q button:hover{border-color:#111}
 .gf-q input{all:unset;width:56px;text-align:center;font:400 16px/1 Geist,system-ui,sans-serif}.gf-q input::-webkit-outer-spin-button,.gf-q input::-webkit-inner-spin-button{-webkit-appearance:none}
+/*CORP-CSS*/
+/* sizing-kit card image: static flat lay, fills the white panel */
+.gvis.mcs:has(>.gki-i),body[data-lp] .gs:not(#paths) .gpanel .gvis.mcs:has(>.gki-i){padding:0!important;display:block!important;background:#fff!important}
+html body .gvis.mcs>.gki-i{visibility:visible!important;display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;transition:none!important;transform:none!important}
+.gpanel:hover .gvis.mcs>.gki-i{transform:none!important}
+/* booking page: the sizing-kit image sits on the grey panel and blends into it */
+html body .gfx .gf-card:has(.gkc-i),html body .gfx .gf-v:has(.gkc-i){perspective:none!important;isolation:auto!important;transform:none!important;filter:none!important}
+html body .gfx .gf-card .gkc-i.gkc-i{visibility:visible!important;display:block;width:min(86%,520px);max-height:min(70svh,620px);height:auto;object-fit:contain;mix-blend-mode:multiply;transition:none}
+@media(max-width:900px){html body .gfx .gf-card .gkc-i.gkc-i{width:auto;max-width:78%;max-height:min(40svh,340px)}}
+/*H2-CSS*/
+.hr2{position:relative;overflow:hidden;margin:8px clamp(6px,.5vw,10px) 0;border-radius:clamp(18px,1.4vw,28px);background:#f4f1ea;min-height:clamp(340px,34.9vw,760px);display:flex;align-items:center;color:#111}
+.hr2-t{position:relative;z-index:3;width:min(56%,900px);display:flex;flex-direction:column;align-items:flex-start;gap:24px;padding:clamp(24px,2.4vw,52px) 0 clamp(24px,2.4vw,52px) calc(var(--gut) - clamp(6px,.5vw,10px))}
+.hr2-k{display:block;font:300 clamp(14px,1.5vw,30px)/1 Geist,system-ui,sans-serif;letter-spacing:.01em;text-transform:uppercase;color:#17140f;margin-bottom:clamp(10px,1.2vw,22px)}
+.hr2 h1{margin:0;font-family:Geist,system-ui,sans-serif;color:#0b0b0b}
+.hr2 h1 .a{display:block;font:400 clamp(20px,2.3vw,44px)/1.1 Geist,system-ui,sans-serif;letter-spacing:-.03em;color:#aa8c5b;background:linear-gradient(90deg,#b59664 0%,#ab8d5d 55%,#a08152 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.18em}
+.hr2 h1 .b{display:block;font:300 clamp(46px,6.1vw,118px)/.98 Geist,system-ui,sans-serif;letter-spacing:-.05em;color:#aa8c5b;background:linear-gradient(90deg,#b59664 0%,#ab8d5d 55%,#a08152 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hr2 p{margin:0;max-width:none;font:400 16px/25.6px Geist,system-ui,sans-serif;letter-spacing:-.6px;color:#000}
+.hr2-cta{display:flex;align-items:center;justify-content:center;height:41px;padding:8px 24px 9px;border-radius:50px;border:0;background:#fff;color:#000;font:400 13px/24px Geist,system-ui,sans-serif;letter-spacing:-.104px;text-decoration:none;box-shadow:none;cursor:pointer;transition:all .2s}
+.hr2-cta:hover{background:#fafafa}
+.hr2-v{position:absolute;inset:0;pointer-events:none}
+html body .hr2 .hr2-v>img.hr2-i.hr2-i{visibility:visible!important;position:absolute;right:0;top:5%;height:100%;width:auto;max-width:none;aspect-ratio:16/9;object-fit:cover;object-position:70% center;mix-blend-mode:multiply}
+.hr2-pw{position:absolute;inset:0;pointer-events:none;-webkit-mask-image:linear-gradient(#000,#000),url(__WEBP:hero-team-cut__);mask-image:linear-gradient(#000,#000),url(__WEBP:hero-team-cut__);-webkit-mask-position:0 0,right 0 top 5%;mask-position:0 0,right 0 top 5%;-webkit-mask-size:100% 100%,auto 100%;mask-size:100% 100%,auto 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-composite:xor;mask-composite:exclude}
+.hr2-pat{position:absolute;inset:0;background:url(__SVG:hr-waves__) center/cover no-repeat;opacity:.2;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent 12%,#000 50%);mask-image:linear-gradient(90deg,transparent 12%,#000 50%)}
+.hr2-arc{position:absolute;right:-2%;top:11%;width:min(50%,940px);aspect-ratio:1;border:1.2px solid rgba(178,136,62,.75);border-radius:50%;-webkit-mask-image:linear-gradient(180deg,#000 28%,transparent 64%);mask-image:linear-gradient(180deg,#000 28%,transparent 64%)}
+.hr2-c{position:absolute;inset:0;z-index:4;pointer-events:none}
+.hr2-c a{position:absolute;left:var(--x);top:var(--y);pointer-events:auto;display:inline-flex;align-items:center;padding:clamp(10px,.95vw,18px) clamp(18px,1.5vw,30px);border-radius:12px;background:rgba(255,255,255,.58);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#111;font:400 clamp(14px,1.1vw,21px)/1 Geist,system-ui,sans-serif;letter-spacing:-.01em;text-decoration:none;white-space:nowrap;box-shadow:0 2px 14px rgba(60,45,10,.06);transition:background .2s,transform .2s}
+.hr2-c a:hover{background:rgba(255,255,255,.86);transform:translateY(-2px)}
+@media(max-width:899px){.hr2{flex-direction:column;align-items:stretch;min-height:0}.hr2-t{width:auto;gap:16px;padding:30px calc(var(--gut) - 6px) 8px}.hr2 p{font-size:14px;line-height:22.4px}.hr2 h1 .a{font-size:clamp(20px,5.6vw,30px)}.hr2 h1 .b{font-size:clamp(50px,14.5vw,80px)}.hr2 p{max-width:none}
+ .hr2-v{position:relative;inset:auto;height:clamp(240px,70vw,420px);order:2}
+ html body .hr2 .hr2-v>img.hr2-i.hr2-i{left:0;right:auto;top:0;width:100%;height:100%;aspect-ratio:auto;object-position:76% center}
+ .hr2-arc{display:none}.hr2-c{position:relative;inset:auto;order:3;display:flex;flex-wrap:wrap;gap:8px;padding:0 22px 22px;margin-top:-6px}.hr2-c a{position:static;padding:11px 16px;font-size:14px}}
+html body .gwrap>#paths.sec{padding-top:clamp(24px,2.6vw,44px)!important}
+@media(max-width:700px){html body .gwrap>#paths.sec{padding-top:28px!important}}
+@media(max-width:899px){.hr2-br{display:none}.hr2-pw{-webkit-mask-size:100% 100%,cover;mask-size:100% 100%,cover;-webkit-mask-position:0 0,76% center;mask-position:0 0,76% center}}
+/* arrival: the card eases in, the copy rises in sequence, the group slides in from the right */
+@keyframes hr2card{from{opacity:0;transform:translateY(16px) scale(.992)}to{opacity:1;transform:none}}
+@keyframes hr2up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes hr2img{from{opacity:0;transform:translateX(46px)}to{opacity:1;transform:none}}
+@keyframes hr2fade{from{opacity:0}}
+.hr2{animation:hr2card .8s cubic-bezier(.2,.8,.2,1) both}
+.hr2 h1 .a,.hr2 h1 .b,.hr2 p,.hr2-cta{animation:hr2up 1s cubic-bezier(.2,.8,.2,1) both}
+.hr2 h1 .a{animation-delay:.12s}.hr2 h1 .b{animation-delay:.2s}.hr2 p{animation-delay:.36s}.hr2-cta{animation-delay:.48s}
+html body .hr2 .hr2-v>img.hr2-i.hr2-i{animation:hr2img 1.2s cubic-bezier(.2,.7,.2,1) .15s both}
+.hr2-pat{animation:hr2fade 1.8s ease .3s both}
+@media(prefers-reduced-motion:reduce){.hr2,.hr2 h1 .a,.hr2 h1 .b,.hr2 p,.hr2-cta,html body .hr2 .hr2-v>img.hr2-i.hr2-i,.hr2-pat{animation:none!important}}
+/*H2-CSS-END*/
+/*GS-CSS*/
+.gf-gs{margin:0 0 16px;padding:11px 14px 7px;border-radius:14px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.03)}
+.gf-gh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;font:400 12.5px/1 Geist,system-ui,sans-serif;letter-spacing:-.015em;color:#8a877f}
+.gf-gh b{font:500 13px/1 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-ink)}.gf-gh b i{display:inline-block;font-style:normal;font-weight:500;color:#112baf;margin-left:8px;padding-left:8px;border-left:1px solid rgba(0,0,0,.12)}
+.gf-gt{--pos:0;position:relative;height:14px;border-radius:7px;background:#ececee;cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none;outline:none}
+.gf-gt:focus-visible{box-shadow:0 0 0 2px #111}
+.gf-gf{position:absolute;left:0;top:0;bottom:0;width:calc(14px + (100% - 14px)*var(--pos));border-radius:7px;background:#112baf}
+.gf-gb{position:absolute;left:calc(14px + (100% - 14px)*var(--pos) - 9px);top:50%;width:3px;height:9px;margin-top:-4.5px;border-radius:2px;background:#fff}
+.gf-gx{position:absolute;top:3px;bottom:3px;width:1px;left:calc(7px + (100% - 14px)*var(--tp));background:rgba(0,0,0,.1);pointer-events:none}
+.gf-gl{position:relative;height:19px;margin-top:6px}
+.gf-gl span{position:absolute;top:0;left:calc(7px + (100% - 14px)*var(--tp));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:2px;color:#b3b0a8}
+.gf-gl em{font:400 10.5px/1 Geist,system-ui,sans-serif;font-style:normal;display:block}.gf-gl small{font:400 8.5px/1 Geist,system-ui,sans-serif;color:#c8c5bd}
+.gf-gl span.on{color:#112baf}.gf-gl span.on em{font-weight:600}.gf-gl span.on small{color:#7d90dc}
+@media(max-width:560px){.gf-gs{padding:10px 12px 6px}.gf-gl span:first-child small{display:none}}
+/*GS-CSS-END*/
+.gf-sl{margin-bottom:24px}
+.gf-tiers{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:24px}
+.gf-tc{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:2px;padding:10px 10px 11px;border:1px solid var(--gf-ln);border-radius:10px;transition:border-color .2s,background .2s}
+.gf-tc b{font:500 13px/1.2 Geist,system-ui,sans-serif;letter-spacing:-.03em;color:var(--gf-ink)}.gf-tc small{font:400 12px/1.2 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-mu)}
+.gf-tc:hover{border-color:rgba(0,0,0,.35)}.gf-tc.lo{background:rgba(17,43,175,.04);border-color:rgba(17,43,175,.25)}
+.gf-tc.on{border:1.8px solid var(--gf-bl);padding:9.2px 9.2px 10.2px;background:rgba(17,43,175,.06)}.gf-tc.on b{color:var(--gf-bl)}
+.gf-tc:focus-visible{outline:2px solid var(--gf-bl);outline-offset:2px}
+.gf-big{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:14px;font:400 16px/1 Geist,system-ui,sans-serif;letter-spacing:-.037em;color:var(--gf-mu)}
+.gf-big b{font:500 40px/1 Geist,system-ui,sans-serif;letter-spacing:-.05em;color:var(--gf-ink)}.gf-big em{font-style:normal}
+.gf-bt{font:500 22px/1 Geist,system-ui,sans-serif;letter-spacing:-.04em;color:var(--gf-ink)}
+.gf-rg{position:relative;padding-bottom:30px}
+.gf-rg input{-webkit-appearance:none;appearance:none;display:block;width:100%;height:24px;margin:0;background:transparent;cursor:pointer;--p:0%}
+.gf-rg input::-webkit-slider-runnable-track{height:4px;border-radius:4px;background:linear-gradient(90deg,var(--gf-bl) var(--p),#dcdce0 var(--p))}
+.gf-rg input::-moz-range-track{height:4px;border-radius:4px;background:#dcdce0}.gf-rg input::-moz-range-progress{height:4px;border-radius:4px;background:var(--gf-bl)}
+.gf-rg input::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;margin-top:-10px;border-radius:50%;background:#fff;border:1.8px solid var(--gf-bl);box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.gf-rg input::-moz-range-thumb{width:21px;height:21px;border-radius:50%;background:#fff;border:1.8px solid var(--gf-bl);box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.gf-rg input:focus-visible{outline:none}.gf-rg input:focus-visible::-webkit-slider-thumb{outline:2px solid #111;outline-offset:2px}
+.gf-tk{position:absolute;left:0;right:0;top:20px;height:30px;pointer-events:none}
+.gf-tk i{position:absolute;top:0;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px}
+.gf-tk u{width:1px;height:6px;background:rgba(0,0,0,.3)}.gf-tk em{font:400 12px/1 Geist,system-ui,sans-serif;font-style:normal;color:var(--gf-mu)}
+.gf-st{display:grid;grid-template-columns:repeat(3,1fr);margin:0 0 16px;border:1px solid var(--gf-ln);border-radius:12px}
+.gf-st>div{padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}.gf-st>div+div{border-left:1px solid var(--gf-ln)}
+.gf-st dt{font:400 12px/1 Geist,system-ui,sans-serif;letter-spacing:-.017em;color:var(--gf-mu)}.gf-st dd{margin:0;font:500 15px/1.3 Geist,system-ui,sans-serif;letter-spacing:-.03em;color:var(--gf-ink)}
+.gf-st s{font-weight:400;color:var(--gf-mu);margin-left:2px}
+.gf-eta{border-radius:12px;background:rgba(0,0,0,.03);padding:14px 16px;display:grid;gap:8px}
+.gf-eta>b{font:500 13px/1.2 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-ink)}
+.gf-eta>div{display:flex;justify-content:space-between;gap:16px;font:400 13px/1.35 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-mu)}.gf-eta>div span:last-child{text-align:right}
+.gf-eta>div.on{color:var(--gf-ink);font-weight:500}.gf-eta>div.on span:first-child::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gf-bl);margin-right:8px;vertical-align:1px}
+.gf-sl+.gf-q{margin-top:0}
+.gf-tm{border:1px solid var(--gf-ln);border-radius:12px;margin:0 0 24px;overflow:hidden}
+.gf-th{display:block;padding:14px 16px;background:rgba(0,0,0,.03);font:500 14px/1.2 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-ink)}
+.gf-tm dl{margin:0}.gf-tm dl>div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:12px 16px;border-top:1px solid var(--gf-ln)}
+.gf-tm dt{font:400 14px/1.45 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-mu)}.gf-tm dd{margin:0;font:400 14px/1.45 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-ink)}
+.gf-tm dd small{font-size:13px;color:var(--gf-mu)}.gf-tm dd a{color:var(--gf-ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(33,33,33,.5)}
+@media(max-width:560px){.gf-tiers{grid-template-columns:repeat(5,1fr);gap:4px}.gf-tc{padding:8px 6px 9px}.gf-tc.on{padding:7.2px 5.2px 8.2px}.gf-tc b{font-size:12px}.gf-tc small{font-size:11px}
+ .gf-st>div{padding:12px 10px}.gf-st dd{font-size:13px}.gf-eta>div{flex-direction:column;gap:2px}.gf-eta>div span:last-child{text-align:left}.gf-tm dl>div{grid-template-columns:1fr;gap:2px}.gf-big b{font-size:34px}}
+/*CORP-CSS-END*/
 .gf-note{margin:0 0 24px;font:400 14px/1.5 Geist,system-ui,sans-serif;letter-spacing:-.02em;color:var(--gf-mu)}
 .gf-note b{color:var(--gf-ink);font-weight:500}
 .gf-rs+.gf-note,.gf-q+.gf-note{margin-top:-16px}
@@ -2211,7 +2309,7 @@ html body[data-lp] .sec.fx.faq2:not(#paths) .sh2{margin-bottom:clamp(20px,2.2vw,
 html body #faq .acc .fq-row{border:0!important;box-shadow:none!important}
 /*FQ-CSS-END*/
 /*OC-CSS*/
-html body[data-lp] .sec.fx.oc2:not(#paths){--ocn:14;--ocs:13svh;height:calc(100svh - var(--navh,65px) + (var(--ocn) - 1)*var(--ocs))!important;padding:0 var(--gut)!important;display:block!important}
+html body[data-lp] .sec.fx.oc2:not(#paths){--ocn:9;--ocs:13svh;height:calc(100svh - var(--navh,65px) + (var(--ocn) - 1)*var(--ocs))!important;padding:0 var(--gut)!important;display:block!important}
 .oc2-pin{position:sticky;top:var(--navh,65px);height:calc(100svh - var(--navh,65px));display:flex;align-items:center;overflow:hidden}
 .oc2-w{width:100%;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:16px;align-items:center;height:100%}
 .oc2-lw{grid-column:2/7;height:100%;overflow:hidden;-webkit-mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent)}
@@ -3091,14 +3189,14 @@ function bxHTML(key){key=key||S.ring;return `<div class="bx-st"><div class="bx">
   st.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();gx=Math.max(-1,Math.min(1,((e.clientX-r.left)/r.width-.5)*2));gy=Math.max(-1,Math.min(1,((e.clientY-r.top)/r.height-.5)*2));hov=true;if(!raf)raf=requestAnimationFrame(tick)});
   st.addEventListener('pointerleave',()=>{hov=false;gx=0;gy=0;if(!raf)raf=requestAnimationFrame(tick)});
  }
- const scan=()=>document.querySelectorAll('.bx:not([data-ok]),.gcf:not([data-ok])').forEach(b=>{b.dataset.ok=1;init(b)});
+ const scan=()=>document.querySelectorAll('.bx:not([data-ok])').forEach(b=>{b.dataset.ok=1;init(b)});
  scan();new MutationObserver(()=>requestAnimationFrame(scan)).observe(document.body,{childList:true,subtree:true});
 })();
 /* gift card artwork from Figma (Gifting Flow 66:27165): gold card on a warm glow, mark and name engraved at the centre */
 function gcFig(){return `<div class="gcf" role="img" aria-label="Ultrahuman Ring Gift Card"><i class="g1"></i><i class="gc-cd"><i class="gc-lt"><i class="gc-h1"></i><i class="gc-h2"></i></i></i><i class="gc-mk"></i><i class="gc-tx"></i></div>`}
 function mcHTML(c,m,t,s){return `<div class="mc-stage"><div class="mc mc-${c}" data-t="bl" data-i="tr" data-metal="${m}"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">${t}</span><span class="mc-t2">${s}</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i></div></div>`}
 function gsec({tag,pri,title,desc,facts,price,cta,href,how,vis,pastel,rev,mc,id,soon}){
-  return `<section class="gs"${id?` id="${id}"`:''}><div class="gpanel ${rev?'rev':''}"><div class="gtxt"><span class="gtag ${pri?'pri':''}">${tag}</span><h3>${title}</h3><p>${desc}</p><ul class="gf">${facts.map(f=>`<li>${f}</li>`).join('')}</ul>${soon?'<div class="gsoon"><span>Coming soon</span></div>':`<div class="gprice">${price}</div><div class="gcta"><a class="btn btn-primary btn-lg mag" href="${href}">${cta}</a><button class="btn btn-ghost btn-lg" onclick="openHow('${how}')">How it works</button></div>`}</div><div class="gvis ${pastel?'pastel':''}${mc?' mcs':''}"${mc?'':' data-tilt'}>${vis}</div></div></section>`;
+  return `<section class="gs"${id?` id="${id}"`:''}><div class="gpanel ${rev?'rev':''}"><div class="gtxt"><span class="gtag ${pri?'pri':''}">${tag}</span><h3>${title}</h3><p>${desc}</p>${facts&&facts.length?`<ul class="gf">${facts.map(f=>`<li>${f}</li>`).join('')}</ul>`:''}${soon?'<div class="gsoon"><span>Coming soon</span></div>':`<div class="gprice">${price}</div><div class="gcta"><a class="btn btn-primary btn-lg mag" href="${href}">${cta}</a></div>`}</div><div class="gvis ${pastel?'pastel':''}${mc?' mcs':''}"${mc?'':' data-tilt'}>${vis}</div></div></section>`;
 }
 const RENDER={AIR:'gring',PRO:'khero'};
 const DESIGNS=[{k:'gold',n:'Gold'},{k:'silver',n:'Silver'},{k:'rose',n:'Rose gold'},{k:'black',n:'Black'},{k:'champ',n:'Champagne'}];
@@ -3162,7 +3260,7 @@ const APPN=[['Nudges','Real-time, actionable nudges on what to do next.',IC('<pa
 const APPX=[['Skin temperature','Monitored 24/7 by a non-contact, medical-grade sensor.',IC('<path d="M14 14.8V5a2 2 0 10-4 0v9.8a4 4 0 104 0z"/>')],['Caffeine Window','Recommends caffeine timings and cut-offs to protect your sleep.',IC('<path d="M5 8h11v6a5 5 0 01-5 5H10a5 5 0 01-5-5V8zM16 10h2a2 2 0 010 4h-2"/>')],['Cycle & Ovulation','Temperature-based ovulation prediction.',IC('<circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 010 16"/>')],['Coaching','ACSM-certified performance coaches, at no extra cost.',IC('<path d="M12 3l2.6 5.6 6 .7-4.4 4.1 1.2 6L12 16.5 6.6 19.4l1.2-6L3.4 9.3l6-.7L12 3z"/>')]];
 const PERS=[['The team','One ring each for a team, a launch or a year well done. Pay once, they size and choose.','corporate','Sizing kits','Gift your team'],['The beginner','For the person who never checks their own health. The ring does the tracking.','gift-card','Gift card','Send a gift card'],['The athlete','For the person who trains hard and wants recovery to match the effort.','gift-card','Gift card','Send a gift card'],['Clients and partners','A thank-you they choose for themselves, with no sizing on your side.','vouchers','Vouchers','Send vouchers'],['The night owl','For the person who sleeps late and wakes up tired. The first score shows them why.','gift-card','Gift card','Send a gift card'],['Events and conferences','One code per attendee. No sizing, no shipping, nothing to carry home.','vouchers','Vouchers','Send vouchers']];
 const BN=[['Sleep','Know how you slept','Stages, timing and a nightly score, from the very first night. No setup, no second device.','wide'],['Recovery','Ready, or not','A daily read on how prepared the body is for the day ahead.','tall'],['Movement','Every step counts','Activity and training load, all day.','m'],['Heart rate','Your pulse, always','Resting rate and variability, around the clock.','h'],['Temperature','Early signals','Skin temperature trends before you feel them.','t'],['Insights','What changed, and why','Plain-language guidance on what to do next.','i']];
-const OCZ_BASE=[['Retreats and offsites','Bring the team back rested','retreats'],['Welcome kits','A first-day gift that keeps going','welcome-kits'],['Wellness programs','Give the programme something to track','wellness-programs'],['Milestones and rewards','Mark the moment, then keep it going','milestones'],['Birthdays','Another year, marked well','birthdays'],['Anniversaries','For the years they have shared','anniversaries'],['Weddings','A first gift for a new chapter','weddings'],['New parents','Rest and recovery, tracked','new-parents'],['Graduations','A start worth celebrating','graduations'],['Promotions','For the one who earned it','promotions'],['Retirements','Time to look after themselves','retirements'],['Thank you','Something that says it daily','thank-you'],['Get well soon','Watch recovery come back','get-well'],['Holidays','The gift that outlasts the season','christmas']];
+const OCZ_BASE=[['Retreats and offsites','Bring the team back rested','retreats'],['Welcome kits','A first-day gift that keeps going','welcome-kits'],['Wellness programs','Give the programme something to track','wellness-programs'],['Milestones and rewards','Mark the moment, then keep it going','milestones'],['Birthdays','Another year, marked well','birthdays'],['Anniversaries','For the years they have shared','anniversaries'],['New parents','Rest and recovery, tracked','new-parents'],['Graduations','A start worth celebrating','graduations'],['Holidays','The gift that outlasts the season','christmas']];
 /* the last occasion is regional: it follows the store (see regional-occasions.html) */
 const REGION_OCC={IN:['Diwali','Lights, rest and a good year ahead','diwali'],US:['Christmas','The gift that outlasts the season','christmas'],GB:['Christmas','The gift that outlasts the season','christmas'],EU:['Christmas','The gift that outlasts the season','christmas'],AE:['Eid','A gift for a celebration shared','eid']};
 const OCZ_LAST=OCZ_BASE.length-1,occ=()=>OCZ_BASE.map((o,i)=>i===OCZ_LAST?(REGION_OCC[S.store]||o):o);
@@ -3208,13 +3306,13 @@ function viewLanding(){
   const OCC={corp:[['Team milestones','A launch shipped, a round closed, a year done well.','corporate','Sizing kits'],['Client and partner gifts','Let them choose. You get the thanks.','vouchers','Vouchers'],['Leadership gifts','For the people who set the pace.','corporate','Sizing kits'],['Events and conferences','One code per attendee, no sizing, no shipping.','vouchers','Vouchers'],['Rewards and incentives','A target hit, a quarter closed.','vouchers','Vouchers'],['Festive season','Diwali, Eid, Christmas. One order for the whole list.','corporate','Sizing kits']],
    ind:[['Birthdays','The ring, their size, their finish.'],['Anniversaries','Something you both wear.'],['Festive season','Diwali, Eid, Christmas.'],['New beginnings','A new job, a new city, a new routine.'],['Parents','For the person who never tracks their own health.'],['Graduation','The first thing they buy themselves, bought for them.']]};
   return `
-  <section class="hxw gc" aria-label="Ultrahuman Gifting"><div class="lh" aria-hidden="true"><div class="lh-st"><div class="lh-bg"></div></div></div><div class="gc-ray" aria-hidden="true"></div><div class="gc-sh" aria-hidden="true"></div><div class="gc-top"><h1 class="h"><span class="a">Give the gift of</span><span class="b">Good Health.</span></h1><div class="gc-cta"><a class="btn btn-primary gc-buy" href="javascript:void(0)" onclick="(document.getElementById('paths')||document.querySelector('.gs')).scrollIntoView({behavior:'smooth'});return false">Buy Gift Card</a></div></div><div class="hx" id="hx"><div class="hx-s"><div class="hx-r"><div class="hx-c" style="--zb:calc(var(--ch)*.05);--dl:.06s;--y:calc(var(--ch)*-.66);--dz:calc(var(--ch)*.975);--e1:#3a3a40;--e2:#121214;--rx:0deg;--oy:100%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-gx" data-t="bl" data-i="tr" data-metal="black"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Jane Doe · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(14,14,26,0) 0,rgba(14,14,26,0) 8%,rgba(14,14,26,.5) 22%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--zb:calc(var(--ch)*.025);--dl:0s;--y:calc(var(--ch)*-.48);--dz:calc(var(--ch)*.667);--e1:#d9b0a1;--e2:#8a5f52;--rx:-32deg;--oy:100%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-si" data-t="bl" data-i="tr" data-metal="rose"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift sizing kit</span><span class="mc-t2">One ring per code</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(20,20,36,0) 0,rgba(20,20,36,0) 13%,rgba(20,20,36,.5) 30%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--sc:1.07;--y:calc(var(--ch)*0);--dz:calc(var(--ch)*0);--e1:#e3cb94;--e2:#8a6c33;--rx:0deg;--oy:50%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-au" data-t="bl" data-i="tr" data-metal="gold"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Jane Doe · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c sh" style="--zb:calc(var(--ch)*.025);--dl:0s;--y:calc(var(--ch)*.45);--dz:calc(var(--ch)*.635);--e1:#dcdde0;--e2:#6d6e73;--rx:32deg;--oy:0%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-sv" data-t="bl" data-i="tr" data-metal="silver"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Ring voucher</span><span class="mc-t2">Value $250 · 12 months</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(20,20,36,0) 0,rgba(20,20,36,.5) 73%,rgba(20,20,36,0) 90%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div><div class="hx-c" style="--zb:calc(var(--ch)*.05);--dl:.06s;--y:calc(var(--ch)*.65);--dz:calc(var(--ch)*.975);--e1:#3a3a40;--e2:#121214;--rx:0deg;--oy:0%;--ry:0deg"><b class="lt"></b><b class="hl"></b><b class="bl"></b><div class="mc mc-gx" data-t="bl" data-i="tr" data-metal="black"><canvas class="mc-gl"></canvas><div class="mc-tg"><span class="mc-t1">Gift card</span><span class="mc-t2">For Jane Doe · Ring AIR</span></div><i class="mc-etch mc-mk"><b class="s"></b><b class="h"></b><b class="f"></b></i><i class="hx-sh" style="background:linear-gradient(180deg,rgba(14,14,26,0) 0,rgba(14,14,26,.5) 77%,rgba(14,14,26,0) 93%)"></i></div><i class="hx-b"></i><i class="hx-u"></i></div></div></div></div></section>
+  <section class="hr2" aria-label="Ultrahuman Gifting"><div class="hr2-t"><h1><span class="a">Give the gift of</span><span class="b">Good Health.</span></h1><p>Sizing kits for the whole team, vouchers they spend <br class="hr2-br">on anything, and gift cards for one person.</p><a class="hr2-cta" href="javascript:void(0)" onclick="(document.getElementById('paths')||document.querySelector('.gs')).scrollIntoView({behavior:'smooth'});return false">Buy Gift Card</a></div><div class="hr2-v" aria-hidden="true"><i class="hr2-pw"><i class="hr2-pat"></i></i><img class="hr2-i" src="__WEBP:hero-team-flat__" alt=""></div></section>
 
   <div class="gwrap"><section class="sec" id="paths">${sh('Three ways to give','One ring at the end of each. Pick the one that fits.','lft')}</section>
   <nav class="gtabs" id="gtabs" aria-label="Three ways to give"><div class="gt-p"><span class="gt-i"></span><button class="on" data-t="g-kit"><b>01</b>Gift sizing kits</button><button data-t="g-voucher"><b>02</b>Ring vouchers</button><button data-t="g-card"><b>03</b>Gift card</button></div></nav>
-  ${gsec({tag:'For teams · Most chosen',pri:true,title:'Gift sizing kits',desc:'Buy in bulk at a volume discount. Everyone sizes themselves at home, then picks their ring.',facts:['Up to 25% off with volume','Kits ship to you in 24 hours','Codes valid for 6 months'],price:`From <b class="num">${fmt(unit(100))}</b> per kit`,cta:'Build an order',href:'#corporate',how:'gsk',mc:1,id:'g-kit',vis:bxHTML()})}
-  ${gsec({soon:true,tag:'For teams',title:'Ring vouchers',desc:'Pick a value, get the codes, pass them on. No sizing and no shipping. They spend it on anything.',facts:['Seven values, up to 50 codes','Share by message or download as CSV','Balance stays on the code'],rev:true,mc:1,id:'g-voucher',vis:mcHTML('sv','silver','Ring voucher','Value $250 · 12 months')})}
-  ${gsec({soon:true,tag:'For one person',title:'Gift card',desc:'Pay for the ring. They get an email with a code, then choose their own size and finish.',facts:['Full ring price, nothing extra','Sent now or on a date you pick','Add a personal note to the email'],mc:1,id:'g-card',vis:gcFig()})}
+  ${gsec({tag:'For teams · Most chosen',pri:true,title:'Gift sizing kits',desc:'Buy in bulk at a volume discount. Everyone sizes themselves at home, then picks their ring.',facts:['Up to 25% off with volume','Kits ship to you in 24 hours','Codes valid for 6 months'],price:`From <b class="num">${fmt(unit(100))}</b> per kit`,cta:'Build an order',href:'#corporate',how:'gsk',mc:1,id:'g-kit',vis:`<img class="gki-i" src="__WEBP:gsk-kits__" alt="Ring PRO and Ring AIR sizing kits with their rings, laid out flat">`})}
+  ${gsec({soon:true,tag:'For teams',title:'Ring vouchers',desc:'Pick a value, get the codes, pass them on. No sizing and no shipping. They spend it on anything.',rev:true,mc:1,id:'g-voucher',vis:mcHTML('sv','silver','Ring voucher','Value $250 · 12 months')})}
+  ${gsec({soon:true,tag:'For one person',title:'Gift card',desc:'Pay for the ring. They get an email with a code, then choose their own size and finish.',mc:1,id:'g-card',vis:gcFig()})}
 </div>
 
   <section class="sec fx dk">${sh('A gift that keeps giving back','Every morning, not just the day it is opened.','lft')}
@@ -3274,9 +3372,9 @@ document.addEventListener('animationend',e=>{if(!/^(fillp|fillv|railA|railB)$/.t
 function viewShop(){
   return `<div style="padding:48px var(--gut) 0"><span class="eyebrow">Store entry point</span><h2 class="h2" style="margin-top:14px">Featured products</h2></div>
   <div style="padding:32px var(--gut) 0"><div class="fp">
-    <div class="fcard"><img src="${IMG.gring}" alt=""><div class="in"><span class="eyebrow on-dark">New</span><h3>Gift Card &middot; Ring AIR</h3><p>Gift better health to the ones who matter most.</p><div class="ctas"><a class="pill-sm pill-blue" href="#gift-card">Gift Ring AIR</a><button class="pill-sm pill-dark" onclick="openHow('gc')">How it works</button></div></div></div>
-    <div class="fcard"><img src="${IMG.kit1}" alt=""><div class="in"><span class="eyebrow on-dark">For teams</span><h3>Gift Sizing Kits</h3><p>Right on time. Every time. A last-minute gift that feels perfectly planned.</p><div class="ctas"><a class="pill-sm pill-blue" href="#corporate">Buy kits</a><button class="pill-sm pill-dark" onclick="openHow('gsk')">How it works</button></div></div></div>
-    <div class="fcard"><img src="${IMG.gcard}" alt=""><div class="in"><span class="eyebrow on-dark">For teams</span><h3>Ring Vouchers</h3><p>Pick a value. We send the codes. They choose.</p><div class="ctas"><a class="pill-sm pill-blue" href="#vouchers">Choose a value</a><button class="pill-sm pill-dark" onclick="openHow('voucher')">How it works</button></div></div></div>
+    <div class="fcard"><img src="${IMG.gring}" alt=""><div class="in"><span class="eyebrow on-dark">New</span><h3>Gift Card &middot; Ring AIR</h3><p>Gift better health to the ones who matter most.</p><div class="ctas"><a class="pill-sm pill-blue" href="#gift-card">Gift Ring AIR</a></div></div></div>
+    <div class="fcard"><img src="${IMG.kit1}" alt=""><div class="in"><span class="eyebrow on-dark">For teams</span><h3>Gift Sizing Kits</h3><p>Right on time. Every time. A last-minute gift that feels perfectly planned.</p><div class="ctas"><a class="pill-sm pill-blue" href="#corporate">Buy kits</a></div></div></div>
+    <div class="fcard"><img src="${IMG.gcard}" alt=""><div class="in"><span class="eyebrow on-dark">For teams</span><h3>Ring Vouchers</h3><p>Pick a value. We send the codes. They choose.</p><div class="ctas"><a class="pill-sm pill-blue" href="#vouchers">Choose a value</a></div></div></div>
   </div></div>
   <div style="padding:56px var(--gut) 0;max-width:720px"><p class="muted">The pricing page and the Shop menu link here too. Each card has a primary action and a quiet "How it works" that opens the explainer sheet without leaving the page.</p></div>
   ${footer()}`;
@@ -3594,7 +3692,7 @@ const coValid=()=>CO_NEED[S.cart.type].every(k=>!CO_ERR[k](S.co[k]));
 function cofield(id,label,ph,type){const bad=S.coTouched[id]&&CO_ERR[id](S.co[id]);return `<div class="field ${bad?'bad':''}" id="cf_${id}"><label for="co_${id}">${label}</label><input class="inp" id="co_${id}" type="${type||'text'}" placeholder="${ph}" value="${esc(S.co[id])}" oninput="coIn('${id}',this.value)" onblur="coBlur('${id}')"><span class="err" id="ce_${id}">${bad||''}</span></div>`}
 function coSummary(c){
   const s=st();let l='';
-  if(c.type==='corporate')l=`<div class="sl"><span>${c.qty} &times; ${RINGS[c.ring].name} kit${c.qty>1?'s':''}</span><span class="num">${fmt(c.list)}</span></div>${c.pct?`<div class="sl save"><span>Volume discount (${c.pct}%)</span><span class="num">&minus; ${fmt(c.list-c.total)}</span></div>`:''}<div class="sl"><span>Shipping</span><span>Free</span></div>`;
+  if(c.type==='corporate')l=`<div class="sl"><span>${c.qty} &times; ${RINGS[c.ring].name} kit${c.qty>1?'s':''}</span><span class="num">${fmt(c.list)}</span></div>${c.pct?`<div class="sl save"><span>Volume discount (${c.pct}%)</span><span class="num">&minus; ${fmt(c.list-c.total)}</span></div>`:''}<div class="sl"><span>Shipping</span><span>Free · arrives ${gfEta(c.qty).win}</span></div>`;
   if(c.type==='voucher')l=`<div class="sl"><span>${c.qty} &times; ${fmt(c.band)} voucher${c.qty>1?'s':''}</span><span class="num">${fmt(c.total)}</span></div><div class="sl"><span>Delivery</span><span>Instant</span></div>`;
   if(c.type==='giftcard')l=`<div class="sl"><span>${RINGS[c.ring].name} gift card</span><span class="num">${fmt(c.total)}</span></div><div class="sl"><span>For</span><span>${esc(c.rName)}</span></div><div class="sl"><span>Arrives</span><span>${c.when==='now'?'Right away':fmtD(c.date)}</span></div>`;
   return `<div>${l}<div class="sl"><span>Tax</span><span>${s.taxline}</span></div><div class="sl t"><span>Total</span><span class="num">${fmt(c.total)}</span></div></div>`;
@@ -3734,11 +3832,13 @@ FX.setup=function(){
   const sel='.pcard,.oc,.srow>div,.acc details,.fqd-row,.st,.hiw,.bstep,.utabs,.group,.fcard,.okgrid>*,.sumcard,.hgrid,.occg';
   app.querySelectorAll(sel).forEach(el=>{if(el.dataset.r)return;el.dataset.r=1;el.classList.add('rv');const sib=[...el.parentElement.children].indexOf(el);el.style.setProperty('--rd',(sib%4)*90+'ms')});
   if(FX.io)FX.io.disconnect();
+  if(app.querySelector('.hr2'))window.__hr2t=performance.now();
+  const lag=()=>app.querySelector('.hr2')&&window.__hr2t?Math.max(0,1250-(performance.now()-window.__hr2t)):0;
   const targets=document.querySelectorAll('#app .rv,#app .sh2,.uf-mark,#app .dkc');
   if(RM||!('IntersectionObserver' in window)){targets.forEach(t=>t.classList.add('in'));return}
-  FX.io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');FX.io.unobserve(e.target)}}),{rootMargin:'0px 0px -5% 0px',threshold:.06});
+  FX.io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const t=e.target;FX.io.unobserve(t);setTimeout(()=>t.classList.add('in'),lag())}}),{rootMargin:'0px 0px -5% 0px',threshold:.06});
   targets.forEach(t=>FX.io.observe(t));
-  setTimeout(()=>targets.forEach(t=>{const r=t.getBoundingClientRect();if(r.top<innerHeight*1.05)t.classList.add('in')}),120);
+  setTimeout(()=>targets.forEach(t=>{const r=t.getBoundingClientRect();if(r.top<innerHeight*1.05)t.classList.add('in')}),120+lag());
 };
 function fxMove(e){
   const t=e.target;if(!t||!t.closest)return;
@@ -3805,9 +3905,47 @@ function gfField(store,id,label,{type='text',ph='',auto=''}={}){const v=(store==
  return `<label class="gf-f" id="gff_${id}"><span>${label}</span><input type="${type}" placeholder="${ph}" value="${esc(v)}" ${auto?`autocomplete="${auto}"`:''} oninput="gfIn('${store}','${id}',this.value)" onblur="gfBlur('${store}','${id}')"><em class="gf-er" id="gfe_${id}"></em></label>`}
 function gfCont(n,label){return `<button type="button" class="gf-c" id="gfc${n}" onclick="gfNext(${n})" ${gfOk(n)?'':'disabled'}>${label||'Continue'}</button>`}
 function gfRingRows(){return `<div class="gf-rs" role="radiogroup">${ringKeys().map(k=>gfRow({sel:S.ring===k,on:`gfRing('${k}')`,title:RINGS[k].name,desc:RDESC[k]||'',price:fmt(st().rings[k]),sub:gfK()==='kit'?'per kit':''})).join('')}</div>`}
+/*CORP-JS*/
+const GF_ETA=[{to:24,ship:'24 hours',d:[3,5]},{to:99,ship:'2 business days',d:[4,7]},{to:1e9,ship:'3 business days',d:[7,10]}];
+function gfEta(q){const e=GF_ETA.find(x=>q<=x.to),bd=n=>{const d=new Date();let c=0;while(c<n){d.setDate(d.getDate()+1);if(d.getDay()%6)c++}return d},f=d=>d.toLocaleDateString(st().loc,{month:'short',day:'numeric'});
+ return{ship:e.ship,win:`${f(bd(e.d[0]))} – ${f(bd(e.d[1]))}`,days:`${e.d[0]}–${e.d[1]} business days`,row:GF_ETA.indexOf(e)}}
+const GF_ETAL=['1–24 kits','25–99 kits','100+ kits'];
+/*GS-JS*/
+const GF_TI=[5,10,25,50,100],GFG_P=q=>(Math.min(100,Math.max(1,q))-1)/99;
+function gfTopHTML(){const q=S.gsk.qty;setTimeout(()=>{gfGsInit();gfSlUpd()},0);
+ return `<div class="gf-gs" id="gfgs"><div class="gf-gh"><span>Volume discount</span><b class="num"><span id="gfgs-n"></span><i id="gfgs-d"></i></b></div>
+ <div class="gf-gt" id="gfgs-t" role="slider" tabindex="0" aria-label="Number of kits" aria-valuemin="1" aria-valuemax="100" aria-valuenow="${q}"><div class="gf-gf"></div><i class="gf-gb"></i>${GF_TI.map(n=>`<u class="gf-gx" style="--tp:${(n-1)/99}"></u>`).join('')}</div>
+ <div class="gf-gl" aria-hidden="true">${GF_TI.map(n=>`<span data-n="${n}" style="--tp:${(n-1)/99}"><em>${n===100?'100+':n}</em><small>kits</small></span>`).join('')}</div></div>`}
+function gfGsSet(q){const t=document.getElementById('gfgs-t');if(!t)return;const b=band(q);
+ t.style.setProperty('--pos',GFG_P(q));
+ const n=document.getElementById('gfgs-n'),d=document.getElementById('gfgs-d');if(n)n.textContent=`${q} kit${q>1?'s':''}`;if(d)d.textContent=b.pct?b.pct+'% off':'no discount yet';
+ t.setAttribute('aria-valuenow',q);t.setAttribute('aria-valuetext',`${q} kits, ${b.pct}% off`);
+ document.querySelectorAll('#gfgs .gf-gl span').forEach(x=>x.classList.toggle('on',q>=+x.dataset.n))}
+function gfGsInit(){const t=document.getElementById('gfgs-t');if(!t||t._i)return;t._i=1;
+ const set=n=>{S.gsk.qty=n;gfSlUpd();gfVisual();gfHeads();gfBtn()};
+ const go=e=>{const r=t.getBoundingClientRect(),f=Math.min(1,Math.max(0,(e.clientX-r.left-7)/(r.width-14)));set(Math.max(1,Math.round(1+f*99)))};
+ t.addEventListener('pointerdown',e=>{t.setPointerCapture(e.pointerId);t.classList.add('drag');go(e);const mv=ev=>go(ev),up=()=>{t.classList.remove('drag');t.removeEventListener('pointermove',mv);t.removeEventListener('pointerup',up);t.removeEventListener('pointercancel',up)};t.addEventListener('pointermove',mv);t.addEventListener('pointerup',up);t.addEventListener('pointercancel',up)});
+ t.addEventListener('keydown',e=>{const q=S.gsk.qty,k={ArrowRight:1,ArrowUp:1,ArrowLeft:-1,ArrowDown:-1}[e.key];if(k){e.preventDefault();set(Math.max(1,Math.min(1000,q+k*(e.shiftKey?5:1))))}else if(e.key==='Home'){e.preventDefault();set(1)}else if(e.key==='End'){e.preventDefault();set(100)}})}
+/*GS-JS-END*/
+function gfSlHTML(){const q=S.gsk.qty;setTimeout(gfSlUpd,0);
+ return `<div class="gf-sl" id="gfsl">
+ <div class="gf-big"><span><b id="gfsl-q">${q}</b> <em id="gfsl-k">kit${q>1?'s':''}</em></span><span class="gf-bt num" id="gfsl-t"></span></div>
+ <dl class="gf-st"><div><dt>Per kit</dt><dd id="gfsl-u"></dd></div><div><dt>You save</dt><dd id="gfsl-s"></dd></div><div><dt>Arrives</dt><dd id="gfsl-e"></dd></div></dl>
+ <div class="gf-eta" id="gfsl-eta"><b>Delivery time depends on volume</b>${GF_ETA.map((e,i)=>`<div data-r="${i}"><span>${GF_ETAL[i]}</span><span>Ships in ${e.ship}, arrives in ${e.d[0]}–${e.d[1]} business days</span></div>`).join('')}</div></div>`}
+function gfSlUpd(){const q=S.gsk.qty,b=band(q),u=unit(q),tot=u*q,list=rp()*q,e=gfEta(q),$$=id=>document.getElementById(id),T=(id,v)=>{const x=$$(id);if(x)x.textContent=v},H=(id,v)=>{const x=$$(id);if(x)x.innerHTML=v};
+ gfGsSet(q);
+ T('gfsl-q',q);T('gfsl-k',q>1?'kits':'kit');T('gfsl-t',fmt(tot));
+ H('gfsl-u',b.pct?`${fmt(u)} <s>${fmt(rp())}</s>`:fmt(u));H('gfsl-s',b.pct?`${b.pct}% · ${fmt(list-tot)}`:'From 5 kits');T('gfsl-e',e.win);
+ document.querySelectorAll('#gfsl-eta [data-r]').forEach(r=>r.classList.toggle('on',+r.dataset.r===e.row));
+ const si=$$('gfq');if(si&&document.activeElement!==si)si.value=q;const nt=$$('gfnote');if(nt)nt.innerHTML=gskNote()}
+function gfQs(v){S.gsk.qty=Math.max(1,parseInt(v,10)||1);gfSlUpd();gfVisual();gfHeads();gfBtn()}
+function gfShipHTML(){const e=gfEta(S.gsk.qty);return `<div class="gf-tm" id="gfship"><b class="gf-th">Shipping</b><dl><div><dt>Cost</dt><dd>Free on every order</dd></div><div><dt>Dispatch</dt><dd>Within ${e.ship} of payment</dd></div><div><dt>Estimated arrival</dt><dd>${e.win} <small>(${e.days})</small></dd></div><div><dt>Delivered to</dt><dd>One address per order. Need several? <a href="javascript:void(0)" onclick="stub(event)">Talk to an expert</a></dd></div></dl></div>`}
+function gfTermsHTML(){const e=gfEta(S.gsk.qty);return `<div class="gf-tm"><b class="gf-th">Shipping and payment terms</b><dl><div><dt>Shipping</dt><dd>Free. Dispatch within ${e.ship}, arrives ${e.win}.</dd></div><div><dt>Payment</dt><dd>Charged in full when you confirm. Card or bank transfer.</dd></div><div><dt>Bank transfer</dt><dd>Invoice emailed to you, due in 7 days. We dispatch once funds clear, so the arrival date starts then.</dd></div><div><dt>Codes</dt><dd>Created when payment clears. Each is valid for 6 months.</dd></div><div><dt>Tax</dt><dd>${st().taxline}.</dd></div><div><dt>Cancellations</dt><dd>Free to cancel before dispatch. After dispatch, unused codes are refundable within 30 days.</dd></div></dl></div>`}
+/*CORP-JS-END*/
 function gfQtyBody(){const k=gfK(),presets=k==='kit'?[5,10,25,50,100]:[1,5,10,25,50],q=k==='kit'?S.gsk.qty:S.v.qty;
  const rows=presets.map(n=>{if(k==='kit'){const p=band(n).pct;return gfRow({sel:q===n,on:`gfQ(${n})`,title:`${n} kits`,desc:p?`${p}% off · ${fmt(unit(n))} per kit`:`${fmt(rp())} per kit`,tag:n===25?'Most chosen':'',price:fmt(unit(n)*n),was:p?fmt(rp()*n):'',sub:''})}
   return gfRow({sel:q===n,on:`gfQ(${n})`,title:`${n} code${n>1?'s':''}`,desc:`${fmt(S.v.band)} each, one per person`,price:fmt(S.v.band*n)})}).join('');
+ if(k==='kit')return gfSlHTML()+`<div class="gf-q"><span>Exact quantity</span><div><button type="button" onclick="gfQd(-1)" aria-label="Fewer">&minus;</button><input id="gfq" type="number" inputmode="numeric" min="1" max="1000" value="${q}" oninput="gfQi(this.value)" aria-label="Quantity"><button type="button" onclick="gfQd(1)" aria-label="More">+</button></div></div><p class="gf-note" id="gfnote">${gskNote()}</p>`;
  return `<div class="gf-rs" role="radiogroup">${rows}</div><div class="gf-q"><span>Other quantity</span><div><button type="button" onclick="gfQd(-1)" aria-label="Fewer">&minus;</button><input id="gfq" type="number" inputmode="numeric" min="1" max="${k==='kit'?1000:50}" value="${q}" oninput="gfQi(this.value)" aria-label="Quantity"><button type="button" onclick="gfQd(1)" aria-label="More">+</button></div></div>${k==='kit'?`<p class="gf-note" id="gfnote">${gskNote()}</p>`:''}`}
 function gfBodyHTML(n){const k=gfK(),g=S.gc;let h='';
  if(n===1){h=k==='voucher'?`<div class="gf-rs" role="radiogroup">${st().bands.map(b=>gfRow({sel:S.v.band===b,on:`gfBand(${b})`,title:`${fmt(b)} voucher`,desc:b>=rp()?`Covers a full ${RINGS[S.ring].name}`:'Spend it on any ring or accessory',tag:b>=rp()?'Covers a ring':'',price:fmt(b)})).join('')}</div>`:gfRingRows();return h+gfCont(1)}
@@ -3818,18 +3956,19 @@ function gfBodyHTML(n){const k=gfK(),g=S.gc;let h='';
    <div class="gf-lb">When should it arrive?</div><div class="gf-rs" role="radiogroup">${gfRow({sel:g.when==='now',on:"gfWhen('now')",title:'Right away',desc:'Sent as soon as you pay',price:''})}${gfRow({sel:g.when==='date',on:"gfWhen('date')",title:'On a date',desc:'We hold the email until the day you pick',price:''})}</div>
    <label class="gf-f gf-box" id="gff_date" ${g.when==='date'?'':'hidden'}><span>Send date</span><input type="date" min="${todayISO()}" value="${g.date}" oninput="gfIn('gc','date',this.value)"><em class="gf-er" id="gfe_date"></em></label></div>${gfCont(3)}`;
   if(k==='voucher')return `<div class="gf-fm"><div class="gf-grp">${gfField('co','name','Full name',{auto:'name'})}${gfField('co','email','Email address',{type:'email',auto:'email'})}</div></div>${gfCont(3)}`;
-  return `<div class="gf-fm"><div class="gf-grp">${gfField('co','company','Company name',{auto:'organization'})}<div class="gf-r2">${gfField('co','name','Full name',{auto:'name'})}${gfField('co','email','Work email',{type:'email',auto:'email'})}</div>${gfField('co','addr','Address',{auto:'street-address'})}<div class="gf-r2">${gfField('co','city','City',{auto:'address-level2'})}${gfField('co','zip','Postcode',{auto:'postal-code'})}</div></div></div>${gfCont(3)}`}
+  return `<div class="gf-fm"><div class="gf-grp">${gfField('co','company','Company name',{auto:'organization'})}<div class="gf-r2">${gfField('co','name','Full name',{auto:'name'})}${gfField('co','email','Work email',{type:'email',auto:'email'})}</div>${gfField('co','addr','Address',{auto:'street-address'})}<div class="gf-r2">${gfField('co','city','City',{auto:'address-level2'})}${gfField('co','zip','Postcode',{auto:'postal-code'})}</div></div></div>${gfShipHTML()}${gfCont(3)}`}
  const c=gfCart();
  return `${k==='card'?`<div class="gf-fm"><div class="gf-grp">${gfField('gc','gName','Your name',{auto:'name'})}${gfField('gc','gEmail','Your email',{type:'email',auto:'email'})}</div></div>`:''}
   <div class="gf-sum">${coSummary(c)}</div>
-  <p class="gf-note">The invoice comes to you. ${k==='card'?'Your giftee only receives the gift email.':'Codes are created when you pay and only redeem on the '+st().name+' store.'} Prototype only. Payment is simulated and nothing is charged.</p>
+  ${k==='kit'?gfTermsHTML():''}<p class="gf-note">${k==='kit'?'':'The invoice comes to you. '+(k==='card'?'Your giftee only receives the gift email.':'Codes are created when you pay and only redeem on the '+st().name+' store.')+' '}Prototype only. Payment is simulated and nothing is charged.</p>
   <div class="gf-fm"><div class="gf-grp"><label class="gf-f"><span>Card number</span><input placeholder="4242 4242 4242 4242" inputmode="numeric"></label><div class="gf-r2"><label class="gf-f"><span>Expiry</span><input placeholder="MM / YY"></label><label class="gf-f"><span>CVC</span><input placeholder="123"></label></div></div></div>
   <button type="button" class="gf-c wide" id="gfc4" onclick="gfPay()" ${gfOk(4)?'':'disabled'}>Confirm and pay ${fmt(gfTotal())}</button>`}
-const GF_HELP={kit:{3:'Kits ship within 24 hours. Every code lands in your inbox.'},voucher:{3:'Your codes appear on the next screen and are emailed to you.'},card:{2:'Only your giftee’s details go on the gift. Your details are taken at checkout, so the invoice comes to you.',3:'Optional. It goes on the surprise email they receive with the card.'}};
+const GF_HELP={kit:{1:'Up to 25% off with volume.',2:'Discounts apply automatically. Bigger orders take a little longer to ship.',3:'Free shipping. Your estimated arrival date is shown below.'},voucher:{3:'Your codes appear on the next screen and are emailed to you.'},card:{2:'Only your giftee’s details go on the gift. Your details are taken at checkout, so the invoice comes to you.',3:'Optional. It goes on the surprise email they receive with the card.'}};
 function gfHeadHTML(n){const d=S.gf.done[n]&&S.gf.step!==n,o=S.gf.step===n,h=o&&(GF_HELP[gfK()]||{})[n];return `<span class="gf-n ${d?'ok':''}">${d?GF_CHK:n}</span><div class="gf-t"><b>${GF[gfK()].steps[n-1]}</b>${d?`<small>${gfSum(n)}</small>`:h?`<small>${h}</small>`:''}</div>${d?`<button type="button" class="gf-e" onclick="gfEdit(${n})">Edit</button>`:''}`}
-function gfCardHTML(){const k=gfK();return k==='kit'?bxHTML(S.ring):k==='voucher'?mcHTML('sv','silver','Ring voucher',gfT2()):gcFig()}
+const GSK_IMG={PRO:'__WEBP:gsk-pro__',AIR:'__WEBP:gsk-air__'};
+function gfCardHTML(){const k=gfK();return k==='kit'?`<img class="gkc-i" src="${GSK_IMG[S.ring]||GSK_IMG.PRO}" alt="${RINGS[S.ring].name} sizing kit with its ring, laid out flat">`:k==='voucher'?mcHTML('sv','silver','Ring voucher',gfT2()):gcFig()}
 function gfT2(){const k=gfK();return k==='kit'?`${S.gsk.qty} × ${RINGS[S.ring].name}`:k==='voucher'?`Value ${fmt(S.v.band)} · 12 months`:`For ${S.gc.rName.trim()||'Jane Doe'} · ${RINGS[S.ring].name}`}
-function gfVisual(){document.querySelectorAll('#gfcard .mc-t2').forEach(e=>e.textContent=gfT2());if(gfK()==='kit'){const b=$('#gfcard .bx');if(b){const t=b.querySelector('.bx-top');if(t.dataset.k!==S.ring){t.dataset.k=S.ring;t.innerHTML=bxArt(S.ring)}}}}
+function gfVisual(){document.querySelectorAll('#gfcard .mc-t2').forEach(e=>e.textContent=gfT2());if(gfK()==='kit'){const im=$('#gfcard .gkc-i');if(im&&im.dataset.k!==S.ring){im.dataset.k=S.ring;im.src=GSK_IMG[S.ring]||GSK_IMG.PRO;im.alt=RINGS[S.ring].name+' sizing kit with its ring, laid out flat'}}}
 function gfRefresh(opts={}){for(let n=1;n<=4;n++){const s=$('#gfs'+n);if(!s)continue;const open=S.gf.step===n;s.classList.toggle('open',open);s.classList.toggle('done',!!S.gf.done[n]&&!open);$('#gfh'+n).innerHTML=gfHeadHTML(n);if(open||opts.all)$('#gfb'+n).innerHTML=gfBodyHTML(n)}}
 function gfBody(n){const b=$('#gfb'+n);if(b)b.innerHTML=gfBodyHTML(n)}
 function gfBtn(){const n=S.gf.step,b=$('#gfc'+n);if(b)b.disabled=!gfOk(n)}
@@ -3838,10 +3977,10 @@ function gfEdit(n){S.gf.step=n;gfRefresh();const s=$('#gfs'+n);if(s)setTimeout((
 function gfRing(k){S.ring=k;gfBody(1);gfVisual();gfHeads()}
 function gfHeads(){for(let n=1;n<=4;n++){const h=$('#gfh'+n);if(h)h.innerHTML=gfHeadHTML(n)}}
 function gfBand(b){S.v.band=b;gfBody(1);gfVisual();gfHeads()}
-function gfQ(n){if(gfK()==='kit')S.gsk.qty=n;else S.v.qty=n;gfBody(2);gfVisual();gfHeads()}
+function gfQ(n){if(gfK()==='kit')S.gsk.qty=n;else S.v.qty=n;gfBody(2);if(gfK()==='kit')gfSlUpd();gfVisual();gfHeads();gfBtn()}
 function gfQd(d){const k=gfK(),q=(k==='kit'?S.gsk.qty:S.v.qty)+d;gfQ(Math.max(1,Math.min(k==='kit'?1000:50,q)))}
 function gfQi(v){let n=parseInt(v,10);if(isNaN(n)||n<1)return;const k=gfK();n=Math.min(n,k==='kit'?1000:50);if(k==='kit')S.gsk.qty=n;else S.v.qty=n;
- document.querySelectorAll('#gfb2 .gf-r').forEach(r=>r.classList.remove('sel'));const nt=$('#gfnote');if(nt)nt.innerHTML=gskNote();gfVisual();gfBtn()}
+ document.querySelectorAll('#gfb2 .gf-r').forEach(r=>r.classList.remove('sel'));const nt=$('#gfnote');if(nt)nt.innerHTML=gskNote();gfSlUpd();gfVisual();gfBtn()}
 function gfWhen(w){S.gc.when=w;gfBody(3)}
 const GF_ERR=()=>({...CO_ERR,...GERR});
 function gfIn(store,id,v){(store==='co'?S.co:S.gc)[id]=v;const f=$('#gff_'+id);if(f&&f.classList.contains('bad')){const m=GF_ERR()[id]?GF_ERR()[id](v):'';f.classList.toggle('bad',!!m);const e=$('#gfe_'+id);if(e)e.textContent=m}
@@ -3855,7 +3994,7 @@ function viewGf(kind){
  const perks={kit:['Free shipping','Valid 6 months','One ring per code'],voucher:['Delivered instantly','Valid 12 months','Balance stays on the code'],card:['Sent by email','Valid 12 months','They choose size and finish']}[kind];
  return `<main class="gfx" data-k="${kind}" style="--gfn:${(document.querySelector('header.nav')||{offsetHeight:57}).offsetHeight}px">
   <aside class="gf-v"><a class="gf-back" href="#gifting">${GF_BACK}<span>Explore Gifting</span></a><div class="gf-card" id="gfcard">${gfCardHTML()}</div><ul class="gf-perks">${perks.map(p=>`<li>${p}</li>`).join('')}</ul></aside>
-  <section class="gf-p"><h1>Customize your gift</h1><p class="gf-sub">${GF[kind].name}</p>
+  <section class="gf-p"><h1>Customize your gift</h1><p class="gf-sub">${GF[kind].name}</p>${kind==='kit'?gfTopHTML():''}
    <div id="gfp">${[1,2,3,4].map(n=>`<section class="gf-s ${S.gf.step===n?'open':''} ${S.gf.done[n]&&S.gf.step!==n?'done':''}" id="gfs${n}"><div class="gf-h" id="gfh${n}">${gfHeadHTML(n)}</div><div class="gf-b"><div class="gf-bi" id="gfb${n}">${S.gf.step===n?gfBodyHTML(n):''}</div></div></section>`).join('')}</div></section>
  </main>`}
 /*GF-JS-END*/
@@ -3904,13 +4043,14 @@ function paintProto(){$('#proto').innerHTML=`
   <h5>Flow map</h5><div class="jumps">
     <a href="#shop">Entry · Shop</a><a href="#gifting">Landing</a>
     <a href="#corporate">Kits</a><a href="#vouchers">Vouchers</a><a href="#gift-card">Gift card</a>
-    <button onclick="openGift();toggleProto()">Gift sheet</button><button onclick="openHow('gsk');toggleProto()">How it works sheet</button>
+    <button onclick="openGift();toggleProto()">Gift sheet</button>
     <a href="#checkout" onclick="S.cart=defaultCart('corporate')">Checkout · kits</a><a href="#checkout" onclick="S.cart=defaultCart('giftcard')">Checkout · gift card</a>
     <a href="#success" onclick="S.order=makeOrder(defaultCart('corporate'),true)">Success · kits</a><a href="#success" onclick="S.order=makeOrder(defaultCart('voucher'),true)">Success · vouchers</a><a href="#success" onclick="S.order=makeOrder(defaultCart('giftcard'),true)">Success · gift card</a><a href="#redeem">Redeem</a></div>
   <h5>Assumptions I made</h5><ol>
     <li><b>Kits are pre-paid by the giver.</b> The giver pays the band-discounted ring price per kit and each code covers one ring. Kits ship free, with no separate sizer fee.</li>
     <li>Discount bands, ring prices and voucher values per currency are placeholders. India shows AIR only, to demo the no-picker rule.</li>
     <li>Gift card follows the brief: full ring price, 12 months validity. The Figma explainer shows 15% off, 30 days and free engraving.</li>
+    <li>Kit ETAs are placeholders: 1–24 kits ship in 24 hours (arrive 3–5 business days), 25–99 in 2 business days (4–7), 100+ in 3 business days (7–10). Bank-transfer terms (invoice due in 7 days, dispatch after funds clear) and the cancellation and refund window (free before dispatch, 30 days for unused codes after) need confirming.</li>
     <li>Checkout and payment are simulated. The redemption page is a stub.</li></ol>
   <h5>Open questions</h5><ol>
     <li class="q">Kits: "fixed amount off set by the band" and "redeems at the discounted price" read two ways. Does the recipient pay anything?</li>
@@ -4077,13 +4217,13 @@ function init(c){
  /* arrival nudge: starts slightly turned and eases flat, so the card reads as interactive */
  card.__intro=()=>{
   card.classList.add('arr');
-  if(rm){return}
+  if(rm||!card.closest('.hx')){st.sw=0;render();return}
   card.animate([{opacity:0,translate:'0 28px',scale:'.968'},{opacity:1,translate:'0 0',scale:'1'}],{duration:1500,easing:'cubic-bezier(.3,0,.28,1)',fill:'both'});
   const t0=performance.now(),from=-.62;
   (function sw(t){const k=Math.min(1,(t-t0)/2600),e=1-Math.pow(1-k,3);st.sw=from*(1-e);render();if(k<1)requestAnimationFrame(sw)})(t0);
  };
  if(rm)card.classList.add('arr');
- if(!rm&&!card.closest('.hx')){
+ if(false){
   stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();gx=Math.max(-1,Math.min(1,((e.clientX-r.left)/r.width-.5)*2));gy=Math.max(-1,Math.min(1,((e.clientY-r.top)/r.height-.5)*2));hov=true;go()});
   stage.addEventListener('pointerleave',()=>{hov=false;gx=0;gy=0;go()});
  }
@@ -4240,7 +4380,7 @@ x.putImageData(im,0,0);document.documentElement.style.setProperty('--face','url(
  function scan(){if(!io)return;document.querySelectorAll('.mc-stage .mc[data-metal]').forEach(c=>{if(c._in)return;c._in=1;io.observe(c)})}
  new MutationObserver(scan).observe(document.body,{childList:true,subtree:true});scan();
 })();
-(function(){const k=new URLSearchParams(location.search).get('how');if(k)addEventListener('load',()=>setTimeout(()=>{try{openHow(k)}catch(e){}},1200))})();
+
 /*PERF-JS*/
 (function(){if(!('IntersectionObserver'in window))return;
  const io=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('hxoff',!e.isIntersecting)),{rootMargin:'120px 0px'});
